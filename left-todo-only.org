@@ -1,0 +1,45 @@
+* think about the org file operations
+** 1. dispaly the process percent of one  todo item
+** 2. insert current date and time, custom time format
+** 3. other interesting actions, CAUTIONS: not too many, really useful contents is enough! 
+
+* TODO learn about the basic git operation about upload and manage dotfiles and orgs
+** 1. create new repository which can be divided corrently
+** 2. think about the construct: CONVIENT TO MANAGE
+    one : CREATE OWN LAYER -> convient to managed by git
+    two : think about dotfile and HOME path question
+    three : REMEMBER! the only target is to import own configuration by git
+** 3. about branch manage and basic git commands
+
+* conclude and set a process list about emacs form 0 to self-used, with git managed
+** 1. how to install spacemacs, especially in develop branch: some questions which lead to useless of spacemacs
+** 2. some basic configuation daily used and convient
+    the part is updated with the use of spacemacs
+** 3. all of the orgs orgnized in repository 
+** 4. last and the most important : document the daily spacemacs flow 
+   
+* config the file saved path
+* when all above is done : consider the notebook and gtd  :better than never:
+
+* git quick start:
+start:
+git lone 
+modify
+git add
+git commit
+git push
+:end
+* native operation:
+1. test the spacemacs develop branch
+   : the checkout single branch commands
+     git clone <git-url> --branch <branch_name> --single-branch [target-fold]
+   : if no, checkout the master branch and 
+     consider the layout own spacemacs by managed with git
+* git operations:
+** del file:
+   rm <file-name>
+   git rm <file-name>
+   git commit -m '...'
+   git push
+** .gitignore
+** TODO need the system learning git 

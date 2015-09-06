@@ -1,0 +1,162 @@
+* DailyWork.org 
+** this org file is used to note *daily work*
+
+*** make sure the meaning of index/search analyaer
+:LOGBOOK:
+CLOCK: [2015-08-25 周二 14:52]--[2015-09-02 周三 17:13] => 194:21
+* ! CAUTION :
+** the *id is the main-key so must be indexed
+* <2015-08-26 周三 > [4/4]
+:LOGBOOK:
+CLOCK: [2015-08-26 周三 13:35]--[2015-08-26 周三 13:42] =>  0:07
+:END:
+** DONE send the documents from kedaxunfei to haizi
+CLOSED: [2015-08-26 周三 14:00]
+大体上有个数了,个人觉得应该是不靠谱，给 haizi 看看再说吧
+:LOGBOOK:
+CLOCK: [2015-08-26 周三 13:42]--[2015-08-26 周三 14:00] =>  0:18
+:END:
+** DONE communicate in QQ with turing rebot 
+CLOSED: [2015-08-28 周五 09:58]
+conclusion : not reliable
+** DONE reorgnize query DSL in ES, then to send to haizi
+CLOSED: [2015-08-28 周五 09:58]
+*** Java API : use_dis_max 
+** DONE receive email from xiaoi
+CLOSED: [2015-08-28 周五 09:58]
+** travelnote type "9999+" how to define the mapping
+* <2015-08-27 周四 10:19>[6/6]
+** DONE use Python to generate one csv file and upload the file to xfyun [1/2]
+CLOSED: [2015-09-02 周三 15:28]
+*** the length limit of question and answer
+*** DONE csv cquestion haractor code 
+CLOSED: [2015-08-27 周四 18:08]
+xfyun needs the GBK code 
+**** DONE need *code snippet*
+CLOSED: [2015-09-02 周三 15:28]
+~import csv
+
+# with as
+with open('csv-name','wb') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    a = ..
+    b = ..
+    csvwriter.writerow((a,b)
+~
+**** *python* encode/decode chinese characters tool          :python code:
+*must* the process : unicode to encode in gb18030
+*decode* ('') : decode the chinese characters as the ('') to *unicode*
+*encode* ('') : encode the chinese characters as the ('')
+*gb18030* : all unicode, *attention* : is no gb *k* 18030
+** DONE use Python to generate one xls about the code question
+CLOSED: [2015-09-02 周三 15:28]
+xlwt.Workbook(encoding='gb18030')
+sheet.write the contents needed to be decoded and encoded in 'gb18030'
+make sure the default code of the [] 
+*** DONE should need *code snippet* 
+CLOSED: [2015-09-02 周三 15:21]
+~import xlwt
+
+file = xlwt.Workbook(encoding='18030')
+# set cell_overwrite_ok to ok default is false
+sheet = file.add_sheet('my_qa', cell_overwrite_ok=True)
+sheet.write(row, col, value)
+file.save('name.xls')
+~
+*** es the "accepted" is not indexed ,so only to the mongoDB
+query the answer type and accepted ture to find the qid
+use the qid to find the question
+Q&A: question : title
+     answer : contents
+** DONE python syntax: with context. refer the python basis tutorial
+CLOSED: [2015-09-02 周三 16:20]
+simply to say : the with...as.. syntax is 
+ the live period in the code block of one object
+ for instance : it is automatically to close the file object
+
+** DONE offer the es client java and curl: only the case than given the question 
+CLOSED: [2015-08-27 周四 14:18]
+** DONE email from xiao i
+CLOSED: [2015-08-27 周四 14:18]
+** DONE test xiaoi and xfyun  
+CLOSED: [2015-08-28 周五 18:50]
+* <2015-08-28 周五 09:58>[1/4]
+** another intelligent serviice : http://www.faqrobot.org/
+*** DONE new create the xls to test the effect 
+CLOSED: [2015-08-28 周五 16:26]
+** DONE send the resume to wnagbingqing at noon <2015-08-28 周五 12:10>
+CLOSED: [2015-08-28 周五 16:26] SCHEDULED: <2015-08-28 周五 12:10>
+** value transfer:
+in python: the basic type is passed by value
+           the complex type is passed by pointer
+** TODO ask git cmd question about master and develop
+** TODO request form data
+* <2015-08-31 周一 10:21>[2/5]
+** DONE 1. programe python to delete data in xunfy, choice : request or scrapy.request
+CLOSED: [2015-08-31 周一 17:13]
+CLOCK: [2015-08-31 周一 11:04]--[2015-08-31 周一 11:29] =>  0:25
+CLOCK: [2015-08-31 周一 10:26]--[2015-08-31 周一 10:51] =>  0:25
+<2015-08-31 周一 10:26>
+*** first write the code and then debug the burpsuite
+*** DONE learn how to use burpsuite to intercept 
+CLOSED: [2015-08-31 周一 14:57]
+CLOCK: [2015-08-31 周一 14:23]--[2015-08-31 周一 14:48] =>  0:25
+**** first : open the proxy configuration 
+**** second : configure burpsuite Proxy->Options->Proxy Listeners
+**** third : configure the brower's proxy is the burpsuite Proxy Listeners
+**** do not configure intercept is on if don't want to intercept the http package
+** TODO 2. test the effiency ??
+** only a timestamp : <2015-08-31 周一 18:19>
+** DONE make the python file to run in server
+CLOSED: [2015-09-01 周二 17:48]
+*** pycharm deploy remote code steps:
+1. copy a project to a local directory
+2. configure : tools->deployment set right configuration
+3. make deployment automatic: tools configuratio
+** TODO synchronize the data between the mongoDB  saved by running spider and the program runing needed
+** TODO make it clear that the ssh-key   
+* <2015-09-01 周二 10:34> [1/2]
+** TODO First done the virtualenv, the study docker with python 
+*** Python : virtualenv
+   operation : pip install virtualenv
+               mkdir <own-dir>
+               virtualenv --distribute <own-dir>  
+               (--distribute can automatically install pip in the <own-dir>)
+   activate : cd <own-dir>
+              source bin/activate
+   deactivate: when in the virtuanenv dir, type: deactivate 
+** DONE find the question the mongo not vaild cursor id 
+CLOSED: [2015-09-01 周二 17:45]
+pymongo 3.0 : coll.find(no_cursor_timeout=False)
+remember cursor.close()
+*** TODO conclude the query DSL in mindmap
+* <2015-09-02 周三 14:18>[0/1]
+** TODO the reindex mechanism in es
+1. create a new index 
+2. pull data from old index and then push data to new index use bulk API
+3. about alias question :
+   use alias to avoid change the application's code when reindexing
+4. the precondition of alias
+   the application visit the alias which points to the old indexed
+*** conclusion : use the alias in application's code insted of indices
+*** the method to create one alias for one index :
+PUT /my_index_v1  // 
+PUT /my_index_v1  //
+pu  t
+
+*** need the code snippet
+PUT 
+* <2015-09-03 周四 09:19>[1/4] 
+** DONE write email to Teacher Cheng
+CLOSED: [2015-09-03 周四 09:57]
+:LOGBOOK:
+CLOCK: [2015-09-03 周四 09:28]--[2015-09-03 周四 09:53] =>  0:25
+:END:
+<2015-09-03 周四 09:27> 
+** TODO depolyment the layout of git-org in github
+*** draw a tree of the layout, include : the naming advantage and reason
+** TODO resume the undone TODO items 
+** TODO start the findwork
+* <2015-09-06 周日 12:23>[0/2]
+** TODO practise the reindex mechanism
+** TODO use xunfei SDK
