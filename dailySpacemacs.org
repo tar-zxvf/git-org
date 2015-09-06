@@ -162,3 +162,6 @@ C-c / m, sparse tree that match tags or properties
 conclusion : now, the two keybinds are enough
 ** TODO timestamp and start a timer for a work
 insert current time timestamp : spc u C-c .
+* <2015-09-06 ÖÜÈÕ 22:17>[0/1]
+** TODO self .emacs.d github 
+** change the format of timestamp to English, as Sunday.

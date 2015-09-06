@@ -1,0 +1,14 @@
+* DailyInterview.org
+* this file is used to note learning and preparing Interview
+* time arrange : mornini : consider, evening : improve familiar
+* <2015-09-06 ÖÜÈÕ 22:20>[0/1]lesson 2, part two cd 
+** TODO need familiar to write the basic C++ code
+** stack FirstInLastOut : only the top element is visible
+** look at ppt carefully
+*** data structure : support which operation and its complexity
+*** usually implement stack with array 
+*** issue : require write code with pencil and paper quickly
+    leetcode 225 : use queue to implement one stack
+    leetcode 232 : use stack to implement one queue
+    leetcode 155 : getmin form one stack
+    leetcode 84 : given a zhifangtu, ask the maximum area of square if can extend
