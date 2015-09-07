@@ -165,3 +165,4 @@ insert current time timestamp : spc u C-c .
 * <2015-09-06 ÖÜÈÕ 22:17>[0/1]
 ** TODO self .emacs.d github 
 ** change the format of timestamp to English, as Sunday.
+** it is enough to remember the a basic keybindings in emacs tutorial
