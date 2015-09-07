@@ -43,3 +43,6 @@ git push
    git push
 ** .gitignore
 ** TODO need the system learning git 
+* [#A] summarize the complete git operations 
+** markdown : use it to record systemical knowledge
+**          : had better to write and finish it by oneself at a time 
