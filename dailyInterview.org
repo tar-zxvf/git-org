@@ -8,7 +8,12 @@
 *** data structure : support which operation and its complexity
 *** usually implement stack with array 
 *** issue : require write code with pencil and paper quickly
-    leetcode 225 : use queue to implement one stack
-    leetcode 232 : use stack to implement one queue
-    leetcode 155 : getmin form one stack
-    leetcode 84 : given a zhifangtu, ask the maximum area of square if can extend
+leetcode 225 : use queue to implement one stack
+leetcode 232 : use stack to implement one queue
+leetcode 155 : getmin form one stack
+leetcode 84 : given a zhifangtu, ask the maximum area of square if can extend
+* <2015-09-07 ÖÜÒ» 13:38>[/]
+** basic three steps : concurrent and in loop form 
+*** TODO familiar to write cpp code
+*** TODO write ppt code
+*** TODO continute to learn and review relevant videos
