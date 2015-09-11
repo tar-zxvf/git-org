@@ -17,3 +17,15 @@ leetcode 84 : given a zhifangtu, ask the maximum area of square if can extend
 *** TODO familiar to write cpp code
 *** TODO write ppt code
 *** TODO continute to learn and review relevant videos
+* <2015-09-09 ÖÜÈý 00:22>[0/8]
+** put attitude to right postition : broaden one's horizen
+should try anthing wanted
+** TODO finish QQ crowd's resume information and set up right main page
+** TODO org checkbox : great to split a task into a number of simple steps
+** TODO finish baiduyun tongbupan
+** TODO finish the lesson two video and note org
+** TODO vs is too huge, what about dev c++?
+** TODO git push.default ?
+** TODO must git commit when file changed?
+deelply comprehen cmd 'git command'
+** TODO clear the git-learn as soon as 
