@@ -6,10 +6,11 @@
 CLOCK: [2015-08-25 周二 14:52]--[2015-09-02 周三 17:13] => 194:21
 * ! CAUTION :
 ** the *id is the main-key so must be indexed
-* <2015-08-26 周三 > [4/4]
-:LOGBOOK:
-CLOCK: [2015-08-26 周三 13:35]--[2015-08-26 周三 13:42] =>  0:07
-:END:
+** [#A] the way to become the god : solve the problem again and again
+*** if had time, search origin code to solve issue
+* ! PRINCIPLE :
+** first finish work, then the other.
+* <2015-08-26 周三 > [4/5]
 ** DONE send the documents from kedaxunfei to haizi
 CLOSED: [2015-08-26 周三 14:00]
 大体上有个数了,个人觉得应该是不靠谱，给 haizi 看看再说吧
@@ -24,7 +25,7 @@ CLOSED: [2015-08-28 周五 09:58]
 *** Java API : use_dis_max 
 ** DONE receive email from xiaoi
 CLOSED: [2015-08-28 周五 09:58]
-** travelnote type "9999+" how to define the mapping
+** TODO travelnote type "9999+" how to define the mapping
 * <2015-08-27 周四 10:19>[6/6]
 ** DONE use Python to generate one csv file and upload the file to xfyun [1/2]
 CLOSED: [2015-09-02 周三 15:28]
@@ -155,8 +156,125 @@ CLOCK: [2015-09-03 周四 09:28]--[2015-09-03 周四 09:53] =>  0:25
 <2015-09-03 周四 09:27> 
 ** TODO depolyment the layout of git-org in github
 *** draw a tree of the layout, include : the naming advantage and reason
-** TODO resume the undone TODO items 
 ** TODO start the findwork
 * <2015-09-06 周日 12:23>[0/2]
 ** TODO practise the reindex mechanism
+:LOGBOOK:
+CLOCK: [2015-09-06 周日 15:55]--[2015-09-06 周日 16:49] =>  0:54
+CLOCK: [2015-09-06 周日 15:25]--[2015-09-06 周日 15:50] =>  0:25
+:END:
+
+not completed reason : one part is the unknown network problem
 ** TODO use xunfei SDK
+android?
+** TODO review all the code writed in Lxp, conclude and document
+* <2015-09-07 周一 10:06>[1/9] 
+** TODO check the python reindex program and the error
+** TODO the principle of agile software development
+** TODO ask the question in stackoverflow
+leave a unresolved and strang question
+** TODO attachment type
+** TODO token_count ? 
+** TODO search all the types include one index 
+solutions : count the type number via mapping 
+seem like no perfect method
+** TODO look the site : http://stackoverflow.com/questions/14465668/elastic-search-multiple-indexes-vs-one-index-and-types-for-different-data-sets
+** DONE learn to add alias for index
+CLOSED: [2015-09-07 周一 20:09]
+*** _alias & _aliases
+*** check alias api : GET /my_index_v1/_alias/*
+***                 : GET /*/_alias/my_index
+*** create alias api : PUT /my_index_v1,  PUT /my_index_v1/_alias/my_index
+*** create alias api : add more add operations when need many aliases
+POST /_aliases 
+{
+ "actions" : [   {"remove" : { "index" : "my_index_v1", "alias" : "my_index"}},
+                 {"add" :    { "index" : "my_index_v2", "alias" : "my_index"}}
+             ]
+}
+** TODO search the '9999+' type mapping 
+* <2015-09-08 周二 11:18>[0/4] 
+** TODO ask if it has restapi and if not, what is the way in java
+*** business custom has the restapi, the follow-ups are consulting
+** TODO the first and second calss statistic error 
+*** TODO the story of 'qurt' series constant int 
+*** TODO how to use the result returned from java
+** TextUnderstander : 文本转语义
+** TODO huidiao mode
+** TODO luanma question
+* <2015-09-10 周四 10:41>[/]
+** abnf, use dict
+#include "dictname.lst"
+...  $city = $u_LST_dictname
+** docker cp containerid:/original/file-path /target/file-path
+** scp ssh-key login
+** pymongo longin auth
+** review all the work before done
+* <2015-09-11 周五 10:41>[0/1] 
+** judge character number in a string:
+use len() under unicode
+** write file in python:
+with open('filename', 'w') as f:
+    f.write(content + '\n')     
+the most simple operation is useful, while can not use package certainly
+** making a functions is useless if it depends on the context
+function is seperated to reuse
+** ABNF FILE syntax
+*** 写一个文件，例：北京有什么好玩的地方
+#ABNF 1.0 UTF-8
+#includ 'dictname.lst"
+// output the $name rule
+root name;
+#ABNF HEAD-END
+// #ABNF can end with ';' 
+
+// two forms below are both effective
+$want = 有{location:have};
+$city {location:city} = 北京 | 上海;
+// quote the include dict
+$city = $u_LST_dictname
+$adj = 好玩的;
+// biz:play returns the 'service' segment
+$main {biz:play} = $city [$want] 什么 [$adj] [地方]
+
+// 需求1: 整个问题的架构是什么?
+// 需求2: 希望抽取出什么信息
+**** the result abnf returns
+"service" : if biz appeared
+"text"    : the input string
+"semantic": the returned semantics
+"rc"      : mark code, 0 is normal
+*** annotation is the same as cpp
+** TODO learn the abnf and make notes well 
+:LOGBOOK:
+CLOCK: [2015-09-11 周五 13:43]--[2015-09-11 周五 14:10] =>  0:27
+:END:
+*** header segment: had better end with ";"
+#ABNF 1.0 UTF-8;
+root vairety_name;
+#ABNF HEAD-END;
+
+dict name later to learn, because not cncouter yet
+*** dict name can only allow int,char,underline
+*** grammar form : $vName = vDefinition   this form is called 'rule'
+**** vName declaration : 
+1. begin with '$', end with white. 
+2. Chinese is not recommanded
+**** vDefinition : 
+**** variable reference :
+three varieties : local/external/variable reference
+focus on local reference
+**** support wild character, (later make it clear)
+**** operator:
+1. '$' '@' : both can be used for declaration, while '$' is only in reference
+2. '{}' : semantic symbol,can not be nested
+2.1     : content in {}, will be the nodes in returned parseed xml
+3. '|' : choose
+4. '[]' : choose or none
+5. '()' : group
+6. '<int>' : repeat int times.  <int+> <int-int>
+7. ? : can add to semantic content, later to research.now, only return semantic
+**** $query {operation%query} = check :
+1. add a new node 'operation' ,the level is equal to 'semantic' node
+2. its value is the $query
+3. can not add {operation.query}, in this way ,it is the node in 'sematntic'

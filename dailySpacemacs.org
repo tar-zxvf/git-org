@@ -18,6 +18,10 @@ Remember: Only: org,when org finished then else
 1. only can write something 
 2. wanted: schedule,todo,count time,GTD
 3. use unfold to save daily thinking 
+* the unforgot original intention
+** learn org to note daily learning experience and review quickly 
+** the ultimate target is to *speed up* the learning process with org
+** the key tools : timestamp clock and org-pomodoro
 * some keybinding:
 spc t n : 
 spc t r :
@@ -59,11 +63,12 @@ firstly : the learning note is simple rather complete
 ** the roughly learn steps when encouter a Q
 ** org-mode and git and programming, all of these are tools
 tools are only needed to be mastered by hands-on used frequently
-* <2015-08-25 周二>[2/8] 
+* <2015-08-25 周二>[4/10] 
 ** DONE copy contents from other software to emacs in windows   :spacemacs:
 CLOSED: [2015-08-25 周二 20:23]
 C-y and p both of them can completet
 ** TODO chinese character code  
+maybe the system font question, wait to have time to learn powerline to solve
 ** DONE learn how to use C-h to look help information           :spacemacs:
 CLOSED: [2015-08-25 周二 20:31]
 usually used: C-h k/v/f/m/d/b          the most useful: k/b/f
@@ -75,14 +80,24 @@ usually used: C-h k/v/f/m/d/b          the most useful: k/b/f
             | v | variable            |
 spc ? : another helm descbind c-h b
         spc\ b
-** TODO [#A] learn the emacs client/server mode
-** TODO statistic the key frequency                             :spacemacs:
+** DONE [#A] learn the emacs client/server mode
+CLOSED: [2015-09-06 周日 20:11]
+*** some thought about emacs C/S 
+emacs is an OS, so everything can be done in emacs, no need to leave emacs,
+hence, the c/s mode should not encourage
+** TODO statistic the key frequency
+the plug-in url : https://github.com/dacap/keyfreq
+the effect of the plug-in : http://ergoemacs.org/emacs/command-frequency.html
 ** TODO config chinese layer by self                              :spacemacs:
+not necessary and after finding a work to finish it 
 ** TODO learn how to operate with  org tag                             :org:
 especiall when the tags are too much, ---> how to use modle
+after work
 ** TODO learn how to update spacemacs by github from andyque    :spacemacs:
 need cmd snippet
-** TODO learn spacemacs video <2015-08-26 周三 21:54>
+mainly about git cmds, for isntance : git rebase, git submodule
+** DONE learn spacemacs video <2015-08-26 周三 21:54>
+CLOSED: [2015-09-06 周日 20:21]
 *read documents* is important
 :LOGBOOK:
 CLOCK: [2015-08-26 周三 23:11]--[2015-08-26 周三 23:36] =>  0:25
@@ -118,8 +133,8 @@ watch: remind other programmers issue
 use-package : lazy load, speed up the startup
 can modify the font and theme
 melpa : emacs package, can visit it's github to read the readme
-**** TODO what is major mode and minor mode:
-*** DONE add a package to record commands
+** TODO what is major mode and minor mode:
+** DONE add a package to record commands
 add mwe-log-commands to dotspacemacs-additional-package
 (evil-leader/set-key
   "oll" 'mwe:log-keyboard-commands
@@ -136,12 +151,15 @@ relevant configuration look for the dotfile to learn
    use git init this time first
 ** TODO emacs org guide is the first  
    pain point : timestamp and sparse tree
-* <2015-09-01 周二 09:53> [0/3] 
+* <2015-09-01 周二 09:53> [1/2] 
 ** TODO check the vim setting, cause the time of spacemacs installation is too much
-*** test   
+*** vim still is the most convient editor across platform, while emacs is an OS meaning to ceratin machine like mac osx
+*** learning some basic vim operation is necessary
+*** after work
 ** checkbox : just add [/] or [%] manually simply                 :spacemacs:
    when convert todo status, the [] will be effective
-** TODO the changed places my-self need                         :spacemacs:
+** DONE the changed places which myself need                    :spacemacs:
+CLOSED: [2015-09-06 周日 20:30]
     swiper syntax-checking org markdown auto-completion
 ** i can configure my layer the interesting function from the develop branch
 ** spacemacs basic concepts:
@@ -149,11 +167,12 @@ relevant configuration look for the dotfile to learn
   package : dotspacemacs-additional-package
             some package that don't need to config one layer
             as to say : the package there is no layer
-** TODO consider the spacemacs layout when use git and about git orgfile
+** consider the spacemacs layout when use git and about git orgfile
 firstly : can use is the most important
 if not satisfied, can update next version
-* <2015-09-02 周三 13:50>[0/2]
-** TODO org-mode : learn to use sparse tree to look at todo item
+* <2015-09-02 周三 13:50>[1/2]
+** DONE org-mode : learn to use sparse tree to look at todo item
+CLOSED: [2015-09-06 周日 20:30]
 :LOGBOOK:
 CLOCK: [2015-09-02 周三 14:29]--[2015-09-02 周三 14:34] =>  0:05
 :END:
@@ -162,7 +181,19 @@ C-c / m, sparse tree that match tags or properties
 conclusion : now, the two keybinds are enough
 ** TODO timestamp and start a timer for a work
 insert current time timestamp : spc u C-c .
-* <2015-09-06 ���� 22:17>[0/1]
+org-clock-in   ,I
+org-clock-out  ,O
+* <2015-09-06 周日 19:58>[0/1]
+** TODO live in emacs
+*** use emacs-w3m to browse internet
+*** read chenhao's mastering-emacs-in-one-year-guide very carefully, deeply understanding
 ** TODO self .emacs.d github 
 ** change the format of timestamp to English, as Sunday.
 ** it is enough to remember the a basic keybindings in emacs tutorial
+* <2015-09-07 周一 11:18>[0/1]
+** package management : quelpa?
+** need to master some basic origin emacs keybindings
+** spacemacs : basic file operation and git in spacemacs
+** use spacemacs as an OS
+* <2015-09-11 周五 18:13>[0/1] 
+** TODO learn to use org-calendar

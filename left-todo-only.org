@@ -46,3 +46,38 @@ git push
 * [#A] summarize the complete git operations 
 ** markdown : use it to record systemical knowledge
 **          : had better to write and finish it by oneself at a time 
+**          : in other words, markdown is used as summary,org is used to daily noted
+* TODO today todo, figure out[2/13]
+** DONE spacemacs git -> configure
+CLOSED: [2015-09-11 周五 16:23]
+when add sth to emacs, read chenbin's article again
+use git in emacs is not appropriate when unfamiliar to git
+** TODO code snippet about org-checkbox[0/3]                     :later on:
+1. [ ] dj
+   - [ ] dlfj
+2. [ ] dkfj
+3. [ ] the text is a smaple to checkbox
+4. '-'
+** DONE write down clearly about this file status, how to solve it with git
+CLOSED: [2015-09-11 周五 16:16]
+*** git-learn to git-org
+*** change the different content with force
+** TODO dailyinterview -> familiar to write cpp
+** TODO -> algorithm videos (as the encounter problems in test and interview
+** TODO -> call chenchao's,  about sql?
+** TODO -> sql?
+** TODO -> building a serach engine
+** TODO -> python 快速教程-> note org or md
+** TODO -> before fiishing -> 后台开发、研发
+** TODO -> after finishit -> machine learning 
+** TODO -> final target -> china serach
+** TODO -> do not forget the aim
+* judge norms of nanlyzers
+** abnf, use dict
+#include "dictname.lst"
+...  $city = $u_LST_dictname
+** docker cp containerid:/original/file-path /target/file-path
+** scp ssh-key login
+** pymongo longin auth
+** review all the work before done
+** how about too mang orgs?
