@@ -210,17 +210,21 @@ POST /_aliases
 ** scp ssh-key login
 ** pymongo longin auth
 ** review all the work before done
-* <2015-09-11 周五 10:41>[0/1] 
+* <2015-09-11 周五 10:41>[0/5] 
 ** judge character number in a string:
 use len() under unicode
 ** write file in python:
-with open('filename', 'w') as f:
-    f.write(content + '\n')     
-the most simple operation is useful, while can not use package certainly
+1) with open('filename', 'w') as f:
+     f.write(content + '\n')     
+2) the most simple operation is useful, while can not use package certainly
 ** making a functions is useless if it depends on the context
 function is seperated to reuse
-** ABNF FILE syntax
-*** 写一个文件，例：北京有什么好玩的地方
+** TODO learn the abnf and make notes well 
+:LOGBOOK:
+CLOCK: [2015-09-11 周五 13:43]--[2015-09-11 周五 14:10] =>  0:27
+:END:
+*** ABNF FILE syntax
+**** 写一个文件，例：北京有什么好玩的地方
 #ABNF 1.0 UTF-8
 #includ 'dictname.lst"
 // output the $name rule
@@ -239,16 +243,12 @@ $main {biz:play} = $city [$want] 什么 [$adj] [地方]
 
 // 需求1: 整个问题的架构是什么?
 // 需求2: 希望抽取出什么信息
-**** the result abnf returns
+***** the result abnf returns
 "service" : if biz appeared
 "text"    : the input string
 "semantic": the returned semantics
 "rc"      : mark code, 0 is normal
-*** annotation is the same as cpp
-** TODO learn the abnf and make notes well 
-:LOGBOOK:
-CLOCK: [2015-09-11 周五 13:43]--[2015-09-11 周五 14:10] =>  0:27
-:END:
+**** annotation is the same as cpp
 *** header segment: had better end with ";"
 #ABNF 1.0 UTF-8;
 root vairety_name;
@@ -278,3 +278,7 @@ focus on local reference
 1. add a new node 'operation' ,the level is equal to 'semantic' node
 2. its value is the $query
 3. can not add {operation.query}, in this way ,it is the node in 'sematntic'
+** TODO abnf is very simliar to regex, so review the regex
+** TODO logstash
+** TODO semantics
+** TODO callback rate standard books?

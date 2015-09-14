@@ -39,8 +39,21 @@ M-RET : insert the same level heading, if the cursor is on some content,
         the content after the cursor is the heading inserted
 M-S-RET : all as above except insert TODO item
 
+-
+C-c -
+
+  - internal/external/internet links are the same format essentially
+  - [ [file:/home/photo/a.jpg/] [refer one jpg] ]
+  - [ [http://www.baidu.com] [refer baidu.com] ]
+
+
 C-c / t
 C-c / m
+** org key-binding:
+,n
+,N
+- M-RET :: this two key-bindings have the similar functions to handly headings
+- M-S-RET ::
 * ! CAUTION :
 ** one : it is necessary to improve the effiency in searching
  it wastes a lot of time and the result is not worthy the time
@@ -197,3 +210,21 @@ org-clock-out  ,O
 ** use spacemacs as an OS
 * <2015-09-11 周五 18:13>[0/1] 
 ** TODO learn to use org-calendar
+** TODO learn to use org-capture, the replacement of remember
+* <2015-09-14 周一 17:41>[0/2] 
+** TODO quickly read and learn org-compact-guide
+:LOGBOOK:
+CLOCK: [2015-09-14 周一 19:05]--[2015-09-14 周一 19:30] =>  0:25
+:END:
+*** description method
+- a small case :: description
+- checkbox :: 
+- todo :: 
+- agenda ::
+** todo item work time logging
+- highly configurable :: progress logging mechanism 
+** properties:
+- core :: ":properties:"
+- the form ::  ":...:"
+* cd
+
