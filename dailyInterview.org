@@ -29,3 +29,9 @@ should try anthing wanted
 ** TODO must git commit when file changed?
 deelply comprehen cmd 'git command'
 ** TODO clear the git-learn as soon as 
+* <2015-09-17 周四 10:23> 
+再次被言中了！
+
+顺道说两个事情：
+1、注意julyedu.com问答社区的帖子。
+2、算法班太重要了（为何重要，你懂的）。

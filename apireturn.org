@@ -1,0 +1,40 @@
+| get_loc_id | http://api-dev.lvxingpai.com/app/search?keyword=北京&loc=true                  |
+|            | not support search some country                                                |
+|------------+--------------------------------------------------------------------------------|
+| viewspot   | http://api.lvxingpai.com/app/poi/viewspots?locality=5473ccd7b8ce043a64108c46   |
+|            | not support country                                                           |
+|------------+--------------------------------------------------------------------------------|
+| restaurant | http://api.lvxingpai.com/app/poi/restaurants?locality=5473ccd7b8ce043a64108c46 |
+|            |                                                                          |
+| travelnote | http://api.lvxingpai.com/app/travelnotes?query=北京                            |
+
+first of all : judge the service segment of reslut returned in xunfei
+display in python 
+judge : result["service"]
+city  : result["semantic"]["slot"]["location"]["city"]
+    "city" property is can be changed, defined by self;
+
+- first judge rc :: now is 0/4, else is to be determine
+  - rc = 4 :: print error
+  - rc = 0 :: , then process below 
+    - judge choices :: 
+      + viewspot :: call [[get_loc_id]] by passing city to get loc_id -> [[viewspot]] to get 
+        - segment returned 
+          * must : 'tel','rank','images','location'
+          * to be determine : 'enName'?,'zhName'?,'timeCostDesc','priceDesc'
+                       'id','address'?,'style'?,'type'?,'rating'?,'locality'
+      + restaurant :: call [[get_loc_id]] by passing city to get loc_id -> [[restaurants]] to get
+        - segment returned
+          * must : display by 'rank',"zhName",'stytle','images','priceDesc','location'
+          * to be determine : 'enName'?,
+                         'id','rating'?,'address'?,'locality','price','type'?
+      + travelnote :: can be serached directly
+        - segment returned 
+          * must : "authorName"?,"title","summary","images","detailUrl"
+          * to be determine : "essence" true ?,
+                              'publishtime','travelTime',
+                               sorted by "publishtime"
+                              'id', 'authorAvatar','source',
+    - the returned list number :: defalut 10, can adjust by appending '&pageSize=50'
+
+- 

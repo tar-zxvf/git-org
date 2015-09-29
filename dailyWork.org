@@ -1,16 +1,23 @@
 * DailyWork.org 
 ** this org file is used to note *daily work*
-
-*** make sure the meaning of index/search analyaer
+*** make sure the meaning of index/search analyzer
 :LOGBOOK:
 CLOCK: [2015-08-25 周二 14:52]--[2015-09-02 周三 17:13] => 194:21
+** the form of the file is to be determined
+- now form ::
+  - first :: note as data in heading
+  - two :: in the heading just below : conclude this day's life
 * ! CAUTION :
-** the *id is the main-key so must be indexed
+** the *id is the main-key, so must be indexed
 ** [#A] the way to become the god : solve the problem again and again
 *** if had time, search origin code to solve issue
 * ! PRINCIPLE :
 ** first finish work, then the other.
-* <2015-08-26 周三 > [4/5]
+** first write a prototype which can run and implement basic functions , then iterates to develop
+- basic :: is the most important
+** state TODO to DONE:
+- remember to write the reason ::
+* <2015-08-26 周三 > [5/5]
 ** DONE send the documents from kedaxunfei to haizi
 CLOSED: [2015-08-26 周三 14:00]
 大体上有个数了,个人觉得应该是不靠谱，给 haizi 看看再说吧
@@ -25,9 +32,11 @@ CLOSED: [2015-08-28 周五 09:58]
 *** Java API : use_dis_max 
 ** DONE receive email from xiaoi
 CLOSED: [2015-08-28 周五 09:58]
-** TODO travelnote type "9999+" how to define the mapping
+** DONE travelnote type "9999+" how to define the mapping
+CLOSED: [2015-09-21 周一 11:01]
+- manually change from "9999+" to "9999" or "10000",
 * <2015-08-27 周四 10:19>[6/6]
-** DONE use Python to generate one csv file and upload the file to xfyun [1/2]
+** DONE use Python to generate one csv file and upload the file to xfyun
 CLOSED: [2015-09-02 周三 15:28]
 *** the length limit of question and answer
 *** DONE csv cquestion haractor code 
@@ -45,10 +54,13 @@ with open('csv-name','wb') as csvfile:
     csvwriter.writerow((a,b)
 ~
 **** *python* encode/decode chinese characters tool          :python code:
-*must* the process : unicode to encode in gb18030
-*decode* ('') : decode the chinese characters as the ('') to *unicode*
-*encode* ('') : encode the chinese characters as the ('')
-*gb18030* : all unicode, *attention* : is no gb *k* 18030
+- *must* the process : unicode to encode in gb18030
+- *decode* ('') : decode the chinese characters as the ('') to *unicode*
+- *encode* ('') : encode the chinese characters as the ('')
+- *gb18030* : all unicode, *attention* : is no gb *k* 18030
+  - it is wrong :: this question belong to environment
+- finally :: code question is easy to be confusing,
+  - solution :: good habit and careful
 ** DONE use Python to generate one xls about the code question
 CLOSED: [2015-09-02 周三 15:28]
 xlwt.Workbook(encoding='gb18030')
@@ -81,18 +93,15 @@ CLOSED: [2015-08-27 周四 14:18]
 CLOSED: [2015-08-27 周四 14:18]
 ** DONE test xiaoi and xfyun  
 CLOSED: [2015-08-28 周五 18:50]
-* <2015-08-28 周五 09:58>[1/4]
+* <2015-08-28 周五 09:58>[2/2]
 ** another intelligent serviice : http://www.faqrobot.org/
-*** DONE new create the xls to test the effect 
-CLOSED: [2015-08-28 周五 16:26]
-** DONE send the resume to wnagbingqing at noon <2015-08-28 周五 12:10>
+** DONE send the resume to wangbingqing at noon <2015-08-28 周五 12:10>
 CLOSED: [2015-08-28 周五 16:26] SCHEDULED: <2015-08-28 周五 12:10>
-** value transfer:
+** pass value in python :
 in python: the basic type is passed by value
            the complex type is passed by pointer
-** TODO ask git cmd question about master and develop
-** TODO request form data
-* <2015-08-31 周一 10:21>[2/5]
+CLOSED: [2015-09-21 周一 11:06]
+* <2015-08-31 周一 10:21>[3/4]
 ** DONE 1. programe python to delete data in xunfy, choice : request or scrapy.request
 CLOSED: [2015-08-31 周一 17:13]
 CLOCK: [2015-08-31 周一 11:04]--[2015-08-31 周一 11:29] =>  0:25
@@ -106,7 +115,6 @@ CLOCK: [2015-08-31 周一 14:23]--[2015-08-31 周一 14:48] =>  0:25
 **** second : configure burpsuite Proxy->Options->Proxy Listeners
 **** third : configure the brower's proxy is the burpsuite Proxy Listeners
 **** do not configure intercept is on if don't want to intercept the http package
-** TODO 2. test the effiency ??
 ** only a timestamp : <2015-08-31 周一 18:19>
 ** DONE make the python file to run in server
 CLOSED: [2015-09-01 周二 17:48]
@@ -114,31 +122,37 @@ CLOSED: [2015-09-01 周二 17:48]
 1. copy a project to a local directory
 2. configure : tools->deployment set right configuration
 3. make deployment automatic: tools configuratio
-** TODO synchronize the data between the mongoDB  saved by running spider and the program runing needed
+** DONE synchronize the data between the mongoDB  saved by running spider and the program runing needed
+CLOSED: [2015-09-21 周一 11:18]
+:end: logstash / mongoDB connector
 ** TODO make it clear that the ssh-key   
-* <2015-09-01 周二 10:34> [1/2]
+* <2015-09-01 周二 10:34> [1/3]
 ** TODO First done the virtualenv, the study docker with python 
-*** Python : virtualenv
-   operation : pip install virtualenv
+*** Python : virtualenv                                       :usualy used:
+- operation : pip install virtualenv
                mkdir <own-dir>
                virtualenv --distribute <own-dir>  
                (--distribute can automatically install pip in the <own-dir>)
-   activate : cd <own-dir>
+- activate : cd <own-dir>
               source bin/activate
-   deactivate: when in the virtuanenv dir, type: deactivate 
+- deactivate: when in the virtuanenv dir, type: deactivate
+- use cmd which python to make it clear 
+
 ** DONE find the question the mongo not vaild cursor id 
 CLOSED: [2015-09-01 周二 17:45]
-pymongo 3.0 : coll.find(no_cursor_timeout=False)
-remember cursor.close()
-*** TODO conclude the query DSL in mindmap
-* <2015-09-02 周三 14:18>[0/1]
-** TODO the reindex mechanism in es
+- pymongo 3.0 : coll.find(no_cursor_timeout=False)
+- remember cursor.close()
+** TODO conclude the query DSL in mindmap
+* <2015-09-02 周三 14:18>[1/1]
+** DONE the reindex mechanism in es
+CLOSED: [2015-09-21 周一 11:10]
 1. create a new index 
 2. pull data from old index and then push data to new index use bulk API
 3. about alias question :
    use alias to avoid change the application's code when reindexing
 4. the precondition of alias
    the application visit the alias which points to the old indexed
+5. need "_source"
 *** conclusion : use the alias in application's code insted of indices
 *** the method to create one alias for one index :
 PUT /my_index_v1  // 
@@ -147,37 +161,40 @@ pu  t
 
 *** need the code snippet
 PUT 
-* <2015-09-03 周四 09:19>[1/4] 
+*** python elasticsearch is easy 
+- elasticsearch.helpers.reindex() is ok;
+* <2015-09-03 周四 09:19>[2/2] 
 ** DONE write email to Teacher Cheng
 CLOSED: [2015-09-03 周四 09:57]
 :LOGBOOK:
 CLOCK: [2015-09-03 周四 09:28]--[2015-09-03 周四 09:53] =>  0:25
 :END:
 <2015-09-03 周四 09:27> 
-** TODO depolyment the layout of git-org in github
+** DONE depolyment the layout of git-org in github
+CLOSED: [2015-09-21 周一 11:12]
 *** draw a tree of the layout, include : the naming advantage and reason
-** TODO start the findwork
-* <2015-09-06 周日 12:23>[0/2]
-** TODO practise the reindex mechanism
+* <2015-09-06 周日 12:23>[2/2]
+** DONE practise the reindex mechanism
+CLOSED: [2015-09-21 周一 11:09]
 :LOGBOOK:
 CLOCK: [2015-09-06 周日 15:55]--[2015-09-06 周日 16:49] =>  0:54
 CLOCK: [2015-09-06 周日 15:25]--[2015-09-06 周日 15:50] =>  0:25
 :END:
-
 not completed reason : one part is the unknown network problem
-** TODO use xunfei SDK
-android?
-** TODO review all the code writed in Lxp, conclude and document
-* <2015-09-07 周一 10:06>[1/9] 
-** TODO check the python reindex program and the error
+** DONE use xunfei SDK in android
+CLOSED: [2015-09-21 周一 11:08]
+- reason : useless, and find java platform api
+* <2015-09-07 周一 10:06>[2/9] 
 ** TODO the principle of agile software development
 ** TODO ask the question in stackoverflow
 leave a unresolved and strang question
 ** TODO attachment type
-** TODO token_count ? 
 ** TODO search all the types include one index 
 solutions : count the type number via mapping 
 seem like no perfect method
+** DONE search the '9999+' type mapping 
+CLOSED: [2015-09-21 周一 11:14]
+:end: manually dealed with it 
 ** TODO look the site : http://stackoverflow.com/questions/14465668/elastic-search-multiple-indexes-vs-one-index-and-types-for-different-data-sets
 ** DONE learn to add alias for index
 CLOSED: [2015-09-07 周一 20:09]
@@ -192,25 +209,25 @@ POST /_aliases
                  {"add" :    { "index" : "my_index_v2", "alias" : "my_index"}}
              ]
 }
-** TODO search the '9999+' type mapping 
-* <2015-09-08 周二 11:18>[0/4] 
-** TODO ask if it has restapi and if not, what is the way in java
+* <2015-09-08 周二 11:18>[1/2] 
+** DONE ask if it has restapi and if not, what is the way in java
+CLOSED: [2015-09-21 周一 11:16]
+:end: rubbish: the co-called technology support 
 *** business custom has the restapi, the follow-ups are consulting
-** TODO the first and second calss statistic error 
-*** TODO the story of 'qurt' series constant int 
-*** TODO how to use the result returned from java
+** the first and second calss statistic error 
+*** the story of 'qurt' series constant int 
+*** how to use the result returned from java
 ** TextUnderstander : 文本转语义
-** TODO huidiao mode
-** TODO luanma question
-* <2015-09-10 周四 10:41>[/]
+** TODO callback mode
+* <2015-09-10 周四 10:41>
 ** abnf, use dict
 #include "dictname.lst"
 ...  $city = $u_LST_dictname
-** docker cp containerid:/original/file-path /target/file-path
+** docker copy file from container to local
+- docker cp containerid:/original/file-path /target/file-path
 ** scp ssh-key login
 ** pymongo longin auth
-** review all the work before done
-* <2015-09-11 周五 10:41>[0/5] 
+* <2015-09-11 周五 10:41>[1/5] 
 ** judge character number in a string:
 use len() under unicode
 ** write file in python:
@@ -219,7 +236,8 @@ use len() under unicode
 2) the most simple operation is useful, while can not use package certainly
 ** making a functions is useless if it depends on the context
 function is seperated to reuse
-** TODO learn the abnf and make notes well 
+** DONE learn the abnf and make notes well 
+CLOSED: [2015-09-21 周一 10:47]
 :LOGBOOK:
 CLOCK: [2015-09-11 周五 13:43]--[2015-09-11 周五 14:10] =>  0:27
 :END:
@@ -256,7 +274,7 @@ root vairety_name;
 
 dict name later to learn, because not cncouter yet
 *** dict name can only allow int,char,underline
-*** grammar form : $vName = vDefinition   this form is called 'rule'
+*** grammar form : $vName = vDefinition   this form is called 'rule' :abnf:
 **** vName declaration : 
 1. begin with '$', end with white. 
 2. Chinese is not recommanded
@@ -265,6 +283,7 @@ dict name later to learn, because not cncouter yet
 three varieties : local/external/variable reference
 focus on local reference
 **** support wild character, (later make it clear)
+1. '$_ti_ch_' :: wild character
 **** operator:
 1. '$' '@' : both can be used for declaration, while '$' is only in reference
 2. '{}' : semantic symbol,can not be nested
@@ -273,12 +292,308 @@ focus on local reference
 4. '[]' : choose or none
 5. '()' : group
 6. '<int>' : repeat int times.  <int+> <int-int>
-7. ? : can add to semantic content, later to research.now, only return semantic
+7. ? :: can add to semantic content, later to research.now, only return semantic
 **** $query {operation%query} = check :
 1. add a new node 'operation' ,the level is equal to 'semantic' node
 2. its value is the $query
 3. can not add {operation.query}, in this way ,it is the node in 'sematntic'
+**** CONCLUSION : the trick to write xunfei abnf
+- first :: make sure the core element that will be matched
+  + can be very very short by cutted down the unnecessary part
+- second :: the places the can be ambigous and useless can be used wild characters
+- watch out the use of combination of wild characters and '<>'
+- so, the left work is only to make sure the core phrase mathing some scene
 ** TODO abnf is very simliar to regex, so review the regex
-** TODO logstash
-** TODO semantics
+** TODO logstash/mongoDB connector haizi  
 ** TODO callback rate standard books?
+* <2015-09-15 周二 10:32>[4/4] 
+** DONE write the relevant ABNF based to the scenes from haizi
+CLOSED: [2015-09-21 周一 10:43]
+:LOGBOOK:
+CLOCK: [2015-09-15 周二 10:49]--[2015-09-15 周二 11:14] =>  0:25
+:END:
+** DONE xunfei semantics sequence                        :xunfei semantics:
+CLOSED: [2015-09-21 周一 10:42]
+私有语义 --> 私有问答 --> 通用问答--> 通用语义
+** DONE make sure the data in need
+CLOSED: [2015-09-21 周一 10:42]
+- the qa needed in xunfei from mongoDB
+- the qa needed in es
+** DONE the form is my decision?                               :work issue:
+CLOSED: [2015-09-21 周一 11:13]
+:end: haizi decides
+- should return what segment?
+- need what information
+- the information is used to decide to which interface
+* <2015-09-16 周三 13:21>[2/2] 
+** DONE communicate with topy about the interface to make rules of how to answer the message
+CLOSED: [2015-09-21 周一 10:41]
+- [X] make sure the individual scene one by one
+  - [X] viewspot :: 
+  - [X] restaurant ::
+  - [X] travelnote :: 
+- look at the apireturn.org file 
+* <2015-09-17 周四 13:51>[5/6] 
+** TODO learn how to operate jira
+** DONE first write the python program to process successfully
+CLOSED: [2015-09-21 周一 10:40]
+** DONE then connect it with ApiumWorker
+CLOSED: [2015-09-21 周一 10:40]
+** about thrift :
+*** a RPC(Remote Procedure Call) protocal cross language 
+*** need write .thrift file and realize the function by self
+*** then use tools of different languages to generate responding code
+** learn git how to change branch
+** json.dumps() : 
+- comprehension : used to convert json format to string
+- requests.get() only accept string
+** DONE write a python script to upload the Q&A with accepted in es?
+CLOSED: [2015-09-21 周一 10:40]
+** DONE consider the operation : get data from es, after processing, then upload to es 
+CLOSED: [2015-09-21 周一 10:40]
+- the q&a should be processed to ensure one question have an answer at least
+** DONE the min_score in es query :
+CLOSED: [2015-09-21 周一 10:40]
+{
+  "min_score" : 2.9,
+  "query": {
+     "term" : { "user" : "kimchy"}
+  }
+}
+** write code : write down the thought and annotation in time and everywhere
+- especially : when tired, it is very easy to puzzle about what you do.
+- more worsely, it is terrible when puzzle about the thought ever have
+** python code : 
+- keep writing down chinese characters with 'u'
+* <2015-09-18 周五 10:09>[2/3] 
+** TODO python code question about message[2/3]
+*** DONE how to deal with message module in *.py
+CLOSED: [2015-09-21 周一 10:39]
+- import is ok
+*** DONE upload the accepted q&a to es and xunfei?
+CLOSED: [2015-09-21 周一 10:10]
+- [X] to xunfei
+- [X] to es ? 
+*** TODO finish the left part about message[0/2]
+- [ ] the es query sentence
+  - [ ] ues multimatch
+  - [ ] about weight and score
+- [ ] restaurant and travelnote
+*** **kwargs :: means the para form of 'a=b, c=d'
+*** when ecounter *list*, watch out the index error, whether list is null
+- python robust :: watch out list
+*** pycharm operation : 
+- debug as step :: F8
+*** question: 
+- restaurant :: a lot of places does not open:?
+- viewspot :: do not support country, only city?
+- travelnote :: returned summary is too long
+** work time system:
+- work and relax are necessary
+- pomodora ? 
+** program princile :
+- consider more robust
+- first program one edition which can work
+- then iterate it, ex : divide into different modules, etc.
+** DONE first return one text sentence, then a card,
+CLOSED: [2015-09-21 周一 10:38]
+- a card :: means the message client can recognize
+** DONE test sentence:[5/5]
+CLOSED: [2015-09-21 周一 10:39]
+- [X] intelligent q&a :: 南京11月天气怎么样阿
+- [X] viewspot :: 
+  - [X] 正向 :: 北京/南京有什么景点
+  - [X] 反向 :: 中国有什么景点， 应返回'请输入城市名称'
+- [X] restaurant :: 南京有什么好吃的
+- [X] travelnote :: 厦门的游记
+- [X] es :: 新西兰的签证
+* <2015-09-21 周一 10:24>[0/6] 
+** TODO conclude elasticsearch basic operation
+DEADLINE: <2015-09-25 周五>
+- main work :: upload to es, and mapping,reindex,etc. basic operation
+- basic ::
+  - create index ::
+  - mapping ::
+  - alias ::
+  - delete :: 
+  - Python elasticsearch ::
+    - helpers.reindex ::
+    - helpers.bulk ::
+    - :: 
+** TODO conclude mongoDB basic operation
+** TODO review all the code writed in Lxp, conclude and document
+** TODO conclude git basic operation
+** TODO scrapy basic frame
+** TODO wenwen Questions:
+- api :: locality support?
+- es :: use alias in code
+  - some details :: min_score, q&a,
+
+* <2015-09-22 周二 10:18>[0/2] 
+** TODO today's work : about elasticsearch
+- note and conclude
+** elasticsearch basic operation :
+*** PUT & POST
+- PUT :: explicitly know the url location to create or change
+- POST :: call a operation ? 
+*** TODO note mapping operation:
+- mapping :: 
+  - what is mapping ::
+    - :: 
+  - dynamic mapping is "false" means ::  
+- default mapping :: PUT /index { "mapping": {"_default_":{}}
+- upload ::
+  - PUT /index  { "mapping" : { "doc_type" : { "_all": {"enabled": "false" } ,"dynamic":{...}, "proterties" : { "field" : { "type" : ..., "analyzer" : "..", "index" : "..", "term_vector": "with_positions_offsets" }}}}}
+    - update a new text field ::
+      + PUT /index/_mapping/doc_type { "properties" : {"new-field": {} .} 
+  - POST /index/doc_type/_mapping  { "doc_type" : ...}
+  - "store" ::
+    - default is false because "_source" default is true
+  - conclude :: 
+    - make sure the http method :: PUT or POST
+    - proterties :: type,analyzer,index,term_vertor(used for highlight)
+      - core type :: integer,long,string,nested
+        - string 
+        - byte,short,integer,long
+        - float,double
+        - boolean
+        - date
+- _all / custom analyzer / 
+** TODO make mapping : one by one [0/3]
+*** TODO mapping :: 
+  - "dynamic" :: "strict",
+    - can dynamic strict and some field to dynamic true::
+      - "properties" : {"title" : {"type" : "object", "dynamic" : true}}
+    - 
+  - search field :: "type":"string", "analyzer": "ik", "term_vector": "with_positions_offsets"
+  - "*id" :: as the main key , must be indexed
+*** TODO upload es
+:LOGBOOK:
+CLOCK: [2015-09-22 周二 15:37]--[2015-09-22 周二 16:02] =>  0:25
+:END:
+*** TODO query sentence :: 
+  - search field :: "query":{ "multi_match", "match"}
+  - return field ::
+    - fielddata_fields ::
+      - use case:: not all, {"query" : {..}, "fielddata_fields" : ["field_name": ["field1","field2",...]}
+      - results :: hits will not change and add a "fields" only contains "field_name" which indexed
+    - fields ::
+      - use case :: {"query": {}, "fields": ["field1"..]}
+      - results :: do not have "hits", and contains the "fields" unless index or not
+  - rank field :: to use this field to score, : function field.value
+    - not sure whether need to set mapping index ::
+      - need to index the field used to field_value_factor:: 
+    - use es to text :: 
+  - score :: boost
+** mongoDB 
+- [[http://www.cnblogs.com/xffy1028/archive/2011/12/03/2272837.html][Mongo db 与mysql 语法比较]] : 借这个机会学习sql
+*** db.collections.find({"a": {$exits: true}})
+* <2015-09-23 周三 10:38>[/] 
+** elasticsearch search nested object
+** query default & or 
+** "store" change to enable
+- think about all types to "store" "index"
+  - think "dynamic_template" ??
+* <2015-09-24 周四 10:33>[0/1] 
+** TODO set all fields store and index: mapping
+:LOGBOOK:
+CLOCK: [2015-09-24 周四 10:33]--[2015-09-24 周四 10:58] =>  0:25
+:END:
+- dynamic_templates :: "mappings" in one type
+  - PUT /my_index
+    {
+        "mappings": {
+            "type_name": {
+                "dynamic_templates": [
+                    { "store_generic": {
+                          "match": "*",
+                          "mapping": {
+                              "store": true,
+                              "index": "no"
+                          }
+                    }}
+                ]
+    }}}
+- _default_ :: use in different types in one index 
+** db.TravelNote all to es
+- dynamic is dynamic_templates
+- pointed segament is pointed
+  - "store" of all fields is ture and "index" of no search and sort is no
+- store ture is used to return search result
+** elasticsearch
+- index name : must lowercase
+- del mapping ?
+** mongoDB
+- sort by _id , xuchuan can from the last place to start
+  - mongoDB sort default is $natural order
+    - pymongo :: coll.find().sort("_id", 1)  1 : ascending, -1 : descending
+    - mongoDB :: db.coll.find().sort({"_id" : 1})
+    - attention :: db.coll.find().sort({"_id" : 1}).skip(100).limit(10)
+      - limit :: the result num returned
+      - skip :: begins from all the sorted data, skip 100, then return limit num
+** scrapy 
+** docker
+* <2015-09-25 周五 09:56>[/] 
+** how to ensure the data in es 
+** test query in native client
+** elasticsearch query and function score query
+- a small example
+  - {
+      "query" : {
+        "function_score" : {
+          "query" : {...},
+          "functions": [
+            { "weight" : ..,     "weight" is the function boost
+              "field_value_factor" :{
+                "field" : "field_name",
+                "factor" : 1.2,
+                "modifier" : "sqrt",
+                "missing" : 1,    // the value will be use if the field does not exist
+               // sqrt(1.2*field_name.value)
+              }}
+          ],
+          "score_mode" : "..",     // the way to deal with functions' score if there are many functions 
+          "boost_mode" : "..",     //the way processing query score and function score
+        },
+      }
+    }
+- attention ::
+  - "query" and "functions" are in "function_score"
+  - "function_score"
+** Java
+- Java basic type
+  - 1.2f :: with "f" ,it is the float type
+* <2015-09-28 周一 12:15> [/]  
+** service in one host can be rebooted, but service for users must not be down
+** mongo connector
+* <2015-09-29 周二 10:23> [/]  
+** mongoDB connector:
+*** make clear the docmanager 
+- func of different part
+*** test Mongo Connector [1/1] 
+- [X] run mongo connector first
+  - [X] replica set
+    - [X] first simple and crude run it testly in native
+  - [X] test mongo connector with elasticsearch with a mapping
+    - [X] new a test mongo in native, to es test index
+    - [X] mongo connector will create new index in es which mongoDB have
+    - [X] test : the index already exists, start mongo-connector
+      - work correctly 
+    - [X] test : the index already exists, but mapping is different
+      - es can run correctly, but what does "dynamic is false" mean?
+**** by the way, familiar to mongoDB basic operation : CURD
+- CURD ::
+  - C :: crate new db/collections/document
+  - U :: update
+  - R :: read
+  - D :: delete
+- mongod ::
+  - mongod --dbpath ... ::
+- replica set ::
+  - mongod :: mongod --replSet setname
+  - mongo :: mongo
+    - rs.initiate()
+  - cmd :: mongo-connector -m host:port -t host:prot -d elastic_doc_manager
+** maven: 
+- keep hello maven to test obj. quickly
+- familiar to maven

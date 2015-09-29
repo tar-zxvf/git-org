@@ -14,7 +14,7 @@ Remember: Only: org,when org finished then else
 1. global-linum-mode
    SPC t r : relative linum
 2. 
-** TODO about org                                                     :org:
+** about org                                                          :org:
 1. only can write something 
 2. wanted: schedule,todo,count time,GTD
 3. use unfold to save daily thinking 
@@ -23,37 +23,80 @@ Remember: Only: org,when org finished then else
 ** the ultimate target is to *speed up* the learning process with org
 ** the key tools : timestamp clock and org-pomodoro
 * some keybinding:
-spc t n : 
-spc t r :
-spc t l :
-spc f e R : reload .spacemacs
-
-, p
-, :
-t
-
-M-h/j/k/l : move with the self heading and the content
-M-S-h/j/k/l : move with subtree
-g-h/j/k/l
+** about line
+- spc t n : 
+- spc t r :
+- spc t l :
+- spc f e R : reload .spacemacs
+** change path in find-file:
+** must master the emacs basic key-binding
+** org key-binding:
+*** spc f t : [[http://www.emacswiki.org/emacs/NeoTree_%25E4%25B8%25AD%25E6%2596%2587wiki][neotree]]
+- dired :: file manager in emacs, : need practised
+  - spc f j : dired-jump
+  - spc a d 
+- iedit :: 
+  - multi change :: 
+    - full way :: virual choose, spc s e, cursor red, change, spc spc
+    - quick way :: * , C-;, change, finish
+    - diff :: full way can point which char to change
+    - essense :: make clear the iedit mode
+- commit key-bind
+  - spc c l 
+  - spc c y 
+*** some mode about org
+,n
+,N
+- M-RET :: this two key-bindings have the similar functions to handly headings
+- M-S-RET ::
+     
+- , p :: org-pomodoro
+- , : :: org-set-tags
+- TODO :: 
+  - t / spc u t / T / M-t
+  - S-left/right ::
+  - , a t
+- SCHEDULED :: ,s
+- DEADLINE :: ,d
+- repeater :: <2007-05-16 Wed 12:30 +1w>  d w m y 
+- agenda view :: ,a
+  - C-c [ :: add file to the front of the list, with 'spc u', add to the end
+  - C-] ::
+  - C-, ::
+- ARCHIVE:: 
+  - [ ] internal :: C-c C-x a , tag :ARCHIVE: , only open with C-TAB
+  - external :: ,A
+- checkbox :: spc m ,
+- spc m , :: update [0/0] in the position
+- time and data ::
+  - ,I  ,O :: 
+*** some navigation in org file, avaliable in different cases
+- M - h/j/k/l : move with the self heading  to different level and the content
+- M - S - h/j/k/l : move with subtree
+- g - h/j/k/l
+*** fixed modle in different cases
 M-RET : insert the same level heading, if the cursor is on some content,
         the content after the cursor is the heading inserted
 M-S-RET : all as above except insert TODO item
+*** some details in todo  
+
+
 
 -
 C-c -
 
+C-c C-c
+
   - internal/external/internet links are the same format essentially
+  - internal link in the same file
   - [ [file:/home/photo/a.jpg/] [refer one jpg] ]
   - [ [http://www.baidu.com] [refer baidu.com] ]
 
 
 C-c / t
 C-c / m
-** org key-binding:
-,n
-,N
-- M-RET :: this two key-bindings have the similar functions to handly headings
-- M-S-RET ::
+ex: d:/MyGithub ->  c:/  
+   just input  d:/MyGithub/c:/  
 * ! CAUTION :
 ** one : it is necessary to improve the effiency in searching
  it wastes a lot of time and the result is not worthy the time
@@ -218,7 +261,7 @@ CLOCK: [2015-09-14 周一 19:05]--[2015-09-14 周一 19:30] =>  0:25
 :END:
 *** description method
 - a small case :: description
-- checkbox :: 
+  - checkbox :: 
 - todo :: 
 - agenda ::
 ** todo item work time logging
@@ -226,5 +269,40 @@ CLOCK: [2015-09-14 周一 19:05]--[2015-09-14 周一 19:30] =>  0:25
 ** properties:
 - core :: ":properties:"
 - the form ::  ":...:"
-* cd
-
+* <2015-09-16 周三 15:46>[0/2] 
+** TODO how to set default font of spacemacs
+** TODO internal link in the same file, the details and examples
+* <2015-09-17 周四 14:51>[/]
+** the process of use emacs:
+use remember or capture in working,
+write down the thought  
+** master the process of org-capture as soon as possilbe
+* <2015-09-21 周一 09:48>[/] 
+** evil-ace-jump-
+- spc l :: -line-mode
+- spc spc spc :: -word-mode
+** interface implement 
+* <2015-09-22 周二 10:20>[/] 
+** inactive time / deactive time
+** capture template :: use given by the article first
+* <2015-09-28 周一 16:03> [/]   
+** dired
+** iedit
+** vim and emacs
+- vim is everywhere, so skilled in vim common used operation is necessary.
+  - no plugin programming writed by chenhao
+- emacs is os, os is appropriate for sb to customized
+  - so can customize it all of one's life
+  - manage its setup in github is necessary
+- either vim or emacs : common operation key-bind should be practised
+* Spacemacs is halted here. <2015-09-28 周一 16:19> 
+- after i find my loving job, at that time, then continute to learn it
+- conclusion :: 
+  - Druing about one month, spacemacs/emacs is elemental familiar to myself.
+    - org-mode is the first necessary
+  - harvest ::
+    - learning mechanism :: begin with experience works, and continute to 
+      study it with docs by self and skilled experience, and then consider it
+      and become practised and skilled
+    - not lost in it and make clear the core target
+ 

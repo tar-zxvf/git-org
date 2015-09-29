@@ -1,3 +1,4 @@
+<<~>>
 * LeftLive.org
 ** used to configure sth in live time
 * thinking is important,
@@ -13,4 +14,9 @@ recall the lesson : one month just do one thing no matter what
 ** about the attitude and some principle
 *** ever make decision when angry and hungry
 *** when hungry, go to eat sth. Do not insit on without meaning
-
+*** the first important step is to finish and use a simple example
+* learn newthing:
+** make out the others works
+** then imiate to write some similar thing
+** then expand
+** conclusion : learning starts with imitaion

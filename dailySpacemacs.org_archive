@@ -1,0 +1,27 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file d:/MyGithub/git-org/dailySpacemacs.org
+
+
+* some navigation in org file, avaliable in different cases
+:PROPERTIES:
+:ARCHIVE_TIME: 2015-09-21 周一 18:08
+:ARCHIVE_FILE: d:/MyGithub/git-org/dailySpacemacs.org
+:ARCHIVE_OLPATH: some keybinding:/org key-binding:
+:ARCHIVE_CATEGORY: dailySpacemacs
+:END:
+- M - h/j/k/l : move with the self heading  to different level and the content
+- M - S - h/j/k/l : move with subtree
+- g - h/j/k/l
+
+* some navigation in org file, avaliable in different cases
+:PROPERTIES:
+:ARCHIVE_TIME: 2015-09-21 周一 18:12
+:ARCHIVE_FILE: d:/MyGithub/git-org/dailySpacemacs.org
+:ARCHIVE_OLPATH: some keybinding:/org key-binding:
+:ARCHIVE_CATEGORY: dailySpacemacs
+:END:
+- M - h/j/k/l : move with the self heading  to different level and the content
+- M - S - h/j/k/l : move with subtree
+- g - h/j/k/l
