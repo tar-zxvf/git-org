@@ -306,3 +306,11 @@ write down the thought
       and become practised and skilled
     - not lost in it and make clear the core target
  
+
+
+
+* only do daily accumulation
+* most common used keybinding:
+- M-/ ::
+- S-TAB ::
+- S-b-b :: 

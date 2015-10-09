@@ -1,0 +1,108 @@
+* elasticsearch.org
+* this file is used to summarize basic operation of elasticsearch
+* instruction :
+** no logical order, just note the solution of encountered question
+- detail question and answer
+** code snippet must be rich
+* <2015-10-08 周四 14:30> 
+** query : 
+*** question : 
+- search 北京 in locality/locality 
+  - search field :: zhName, alias
+  - sort about field :: rating, hotness
+  - return field :: id, images
+  - set min_score ::
+  - function query:: score_mode, boost_mode
+**** - solution :: basic curl and Java Client(not here, in intelliJ)
+curl -XGET host:prot/index/type/_search -d '
+{
+  "min_score" : 1,  //the score bigger than it can be returned, //optional
+  "query":{
+    "function_score":{
+      "query":{
+        "multi_match":{
+          "query" : "北京",
+          "fields" : ["zhName", "alias"]
+        }
+      },
+      "functions":[{
+        "field_value_factor":{
+          "field": "rating",
+          "missing" : 0.5,          // value used if doc doesn't have the field
+          "modifier" : none,      // default is none
+          "factor" : 1            // default is 1
+        },
+        "field_value_factor":{
+          "field" : "hoteness",
+          "missing" : 0.5,
+          "modifier" : none,
+          "factor" : 1, 
+        }}
+      ],
+    }
+    "score_mode" : "avg", // the way to combine the functions, default is multiply
+    "boost_mode" : "sum",      // the way to combine the functions and query, default is multiply
+  }
+}'
+*** question : 
+- search "和闺蜜一起去旅行" in mongo_travelnote/travelnote 
+  - search field :: contents.content, contents.title
+  - sort about field :: rating
+  - return field :: id, title, images, authorAvatar, authorName
+  - set min_score ::
+  - function query:: score_mode, boost_mode
+**** solution :: 
+curl -XGET 192.168.200.3:9210/mongo_travelnote/travelnote -d'
+{
+  "min_score" : 0,
+  "query" : {
+    "function_score":{
+      "query":{
+        "nested":{    // nested query to query nested type
+          "path": "contents",
+          "query" : {
+            "bool" : {
+              "must" : [
+                {"match":{
+                   "contents.content":{
+                     "query" : "和闺蜜一起去旅行",
+                     "boost" : 1    // boost the match query in bool
+                   }
+                 }
+                },
+                {"match": {
+                    "contents.title":{
+                     "query" : "和闺蜜一起去旅行",
+                     "boost" : 5    // boost the match query in bool
+                }}}
+              ]}}}},
+      "functions":[
+        {
+          "field_value_factor":{
+            "field": "rating",
+            "missing": 0.5,
+            "modifier": "none",
+            "factor" : 1
+          }    
+        }],
+      "boost_mode": "multiply"
+    }
+  },
+  "_source":["title", "images", "authorAvatar", "authorName"]
+}
+  
+** set score_mode and boost_mode
+- tf-idf :: the range of its score may be very wide
+- hotness and rating :: as a factor of tf-idf score may be better
+  - have been already normalized :: range from 0 to 1
+- first solution ::
+  - score_mode :: avg
+  - boost_mode :: multiply
+  - question :: how to deal with the missing of rating or hotness 
+* <2015-10-09 周五 10:23> [/] 
+- elasticsearch index name :: can only be lowercase and begin with underline
+- code question :: code question in chinese character, file coding in utf-8,
+* <2015-10-09 周五 17:18> 
+- return a version for each search hit
+  - { "version" : true,
+      "query" : ....    }

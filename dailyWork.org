@@ -409,6 +409,8 @@ CLOSED: [2015-09-21 周一 10:39]
 - [X] es :: 新西兰的签证
 * <2015-09-21 周一 10:24>[0/6] 
 ** TODO conclude elasticsearch basic operation
+- to file [[elasticsearch.org]]
+# elasticsearch.org
 DEADLINE: <2015-09-25 周五>
 - main work :: upload to es, and mapping,reindex,etc. basic operation
 - basic ::
@@ -589,11 +591,96 @@ CLOCK: [2015-09-24 周四 10:33]--[2015-09-24 周四 10:58] =>  0:25
   - D :: delete
 - mongod ::
   - mongod --dbpath ... ::
-- replica set ::
+- mongo connector ::
   - mongod :: mongod --replSet setname
   - mongo :: mongo
     - rs.initiate()
   - cmd :: mongo-connector -m host:port -t host:prot -d elastic_doc_manager
+  - special db ::
+    - mongo-connector will no procee special dbs :: test,local 
 ** maven: 
 - keep hello maven to test obj. quickly
 - familiar to maven
+* <2015-09-30 周三 12:35> [/] 
+** mongo connector wiki
+:LOGBOOK:
+CLOCK: [2015-09-30 周三 14:14]--[2015-09-30 周三 14:39] =>  0:25
+CLOCK: [2015-09-30 周三 13:42]--[2015-09-30 周三 14:07] =>  0:25
+:END:
+- oplog process file
+  - keep track of the lastest oplog 
+- resync
+** optimize work after holiday
+* <2015-10-08 周四 10:08> [/] 
+** make sure the elasticsearch query: [0/3]
+elasticsearch.org
+- [ ] need :
+  - [ ] search keyword in responding segment
+  - [ ] need details
+    - boost ::
+
+- [ ] curl form
+- [ ] java form
+* <2015-10-09 周五 10:46> [/] 
+** review technology depositing   
+- elasticsearch
+- mongoDB
+** MVC (interview & career)  
+* 2 abnf, 1, mongoDB connector
+** TODO [#A] mongoDB connector
+** TODO [#B] ABNF self-implement** ik, replace xunfei abnf, ** sort factor(two way: main, jiandu),
+** TODO [#C] es search note etc.
+** mongoDB connector    data fact  mapping
+- oplog, error happened
+- connector from mongoDB to es implement, 
+- mapping
+** mongo-connector
+*** from big function completion to small detail
+- installation
+  - pip install mongo-connector
+- get started
+  - [ ] install mongo-connector
+  - [ ] start up a mongo replica ::
+  - [ ] start up elasticsearch
+  - [ ] start up mongo-connector with -m -t -d
+  -  
+- configuration file : config.json   dot-notation
+  - "__xxxx" will be ignored, can be used to comment
+
+*** system overview 
+1. main thread create oplogthread based on mongos? mongod? information,
+   - initialize docmanger for each replication endpoint,
+   - provied the docmangers to oplogthread
+2. oplogthread create an tailable cursor into oplog.rs collection of mongod
+3. oplogthread initiate a "*collection dump*",by which it upsert document throuth docmanager
+   - happen only first time mongo-connector is started
+   - do not happen again as long as mongo-connector can find the last timestamp
+4. oplogthread poll oplog.rs for new documents corresponding one operation
+   - insert :: docmanger upsert method
+   - update :: retrieve version of document on the remote system,apply
+     - apply update, and resave it on the remote system:: 
+   - delete :: remove document with id from remote system
+   - other database command :: docmanger handle_command method
+5. oplogthread notes the timestamp from oplog.rs and write out to oplog.timestamp
+   - only happen untill mongo-connector is killed
+   - other cases will cause oplogthread to take some actions
+*** oplog.timestamp
+- collection dumps ::
+  - when oplog progress file is not found, mongo-connector will begin data form
+    - all mongoDB collections in colllection dumps
+  - then the oplog.timestamp will be updated with most recent timestamp from
+    - before the dumps happened
+  - then apllies all operations form before the dump happened
+  - can force the dump to happen
+- format :: ["oplog name", timestamp]
+- creation ::
+  - created as the final step of mongo-connector initialization
+    - or happens with or without a collection dump
+- update ::
+  - main thread monitor the progress of oplog-tailing thread
+    - main threads of connector update the progress file per second
+  - oplog-tailing thread publish their progress at following times:
+    -  
+*** oplog progress file : 
+- created with collection dump which initiated by opload thread which created by main thread
+- updated usually by main thread, oploathread write out to if if main thread were killed
