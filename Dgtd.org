@@ -1,0 +1,237 @@
+* Dgtd.org :: note is the basic and great thingo
+
+** learn from what you experience is great and enough
+** gtd : list the smallest detail you will do next 
+* The Initial and Basic Interest: <2015-10-19 周一 11:25> 
+:DO NOT REMEMBER THE ORIGINAL HEART:
+** the way to interact between human and computer 
+- the connection between human and computer
+- execute commands in linux or other OS in an intelligent way
+- optimize the way to use machine
+*** python to scratch data and apply Machine Learning Algorithm to data
+:Python:
+** to change the world around me 
+- especially to change the mobile device to anything I want
+- or to add or to create sth i love
+*** develop the web, Android, IOS,
+:JavaScript:
+* this file is used to note dailylife.
+* program basic : shoude be very familiar to this as a programmer 
++ 2^16 = 65536
++ 2^8  = 256
++ float 精度 7 位， double 精度 16 位
+* <2015-09-19 周六 14:50>[1/3] 
+** DONE finished learning jikexueyuan c++ with pomodoro 
+CLOSED: [2015-09-20 周日 23:10]
+:LOGBOOK:
+CLOCK: [2015-09-19 周六 14:52]--[2015-09-19 周六 15:17] =>  0:25
+:END:
+*** first pomodoro :: familiar to dev-cpp
+*** second pomodoro :: install cpp layer in spacemacs and install vc++
+:LOGBOOK:
+CLOCK: [2015-09-19 周六 17:57]--[2015-09-19 周六 18:22] =>  0:25
+:END:
+- second pomodoro is wasted by microsoft rubbish vc
+  - conclusion :: if necessary, go to mba
+  - finally :: code::blocks: lack of compiler setting
+    - finally :: return dev-cpp : 天大的讽刺啊，微软，呵呵
+- spacemacs cpp ide is a bit of complex in ms
+*** third pomodoro : *start* some learning:
+- L01OOP
+  - basic instructure ::
+    - main.cpp :: main entry of the programe
+    - People.h :: header file which only contains the declaration of class
+    - People.cpp :: implement the class::sayHello() func.
+      - include People.h 
+  - new & del :: memory management
+- L02namespace ::
+  - using namespace ns_ns :: the simple way to use namespace
+  - or only use ns_ns::People everytime the People appeared  
+:LOGBOOK:
+CLOCK: [2015-09-19 周六 16:23]--[2015-09-19 周六 16:48] =>  0:25
+:END:
+*** fouth pomodoro : 
+- L03Classes :: 
+  - inherit classes :: #include corresponding files and ':' public/private
+*** fifth pomodoro :
+:LOGBOOK:
+CLOCK: [2015-09-19 周六 23:09]--[2015-09-19 周六 23:34] =>  0:25
+:END:
+- L04Constructer/de-constructer method:
+  - Object *obj = new Object() :: only call constructer method
+  - when delete obj :: call ~Object()
+  - Object obj :: in one code block, call constructer method,
+               :: when the code block ends, call ~Object()
+- L05 SuperC::
+  - subclass constructer method calls parent Class constructer
+  - Man(int age) implement :: Man::Man(int age):People (age, 1) {}
+- L06 Super::
+  - subtree call parentClass method :: 
+    - in man.h :: void sayHello();
+    - in man.cpp :: Man::sayHello(){  People::sayHello();}
+    - in main.cpp :: m->People::sayHello();
+  - advantage :: no matter how many levels subclass inherits parentClass, it can call pointed class's method
+    - super keyword in Java :: only call the parentClass 
+** TODO make clear the difference of :: class b:public/private a 
+* <2015-09-20 周日 11:36>[1/5] 
+** DONE jikexueyuan c++ with pomodoro
+CLOSED: [2015-09-20 周日 23:10]
+*** first pomodoro 
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 11:36]--[2015-09-20 周日 12:01] =>  0:25
+:END:
+- L07 Functions ::
+  - polymorphous :: 
+    - subclass's type belongs to its parentClass, so the parentClass's pointer can point its subclass,
+  - People *p = new Man(20); p->sayHello(); :: will call People::sayHello()
+    - must use 'virtual sayHello();' to call Man::sayHello()
+  - virtual void eat()=0; :: 纯虚函数，only declare not implement. :: implement in subclass
+  - L08 纯虚类:: all the functions in one class is 纯虚函数 equals to interface in Java
+*** second pomodoro
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 12:22]--[2015-09-20 周日 12:47] =>  0:25
+:END:
+- L09 Overload ::
+  - function name is same while input arguemnt is different,
+  - c++ class:
+    - remember :: private, public, virutal,
+    - finish time <2015-09-20 周日 12:32> ::
+- L10 Operator ::
+  - operator overload :: void operator += (Point p) {};
+  - operator called by value object, :: (*p) += Point (2,2);
+  - three ways to construct one class :: Point p(10,10);  Point *p = new Poin(10, 10); Point(2,2)
+*** third pomodoro:
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 13:05]--[2015-09-20 周日 13:30] =>  0:25
+:END:
+- L11 PseudoFunctions :: run class as functions ::
+  - run functions normally :: sayHello();
+  - run class :: class Hello{ public: void operator ()() {};};    Hello h; h();
+*** fourth pomodoro:
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 16:11]--[2015-09-20 周日 16:36] =>  0:25
+:END:
+- L12 FunctionPointer
+*** fifth pomodoro:
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 17:11]--[2015-09-20 周日 17:36] =>  0:25
+:END:
+- L13 Ref ::
+  - when pass value :: default : execute the memory copy sentence, 
+  - use '&' means do not use the default mechanism;
+- L14 FriendCalss :: friend cl
+  - class A { friend class B; private : int num;} 
+  - class B can access A::num,
+- L15 stl ::
+  - list, map,
+  - operator :: map: [] ,
+*** six pomodoro : 
+:LOGBOOK:
+CLOCK: [2015-09-20 周日 21:23]--[2015-09-20 周日 21:48] =>  0:25
+:END:
+- L16 String ::
+  - operator overload :: <string> str+='';  <sstream> ss<<"hello"<<10<<2.2;
+- L17 FileSystem :: <fstream>
+  - create a file :: ofstream of("data.txt"); of>>"hello"; of.close;
+  - read a file :: ifstream inf("data.txt"); char c; inf>>c;
+    - output all file string :: <sstream>  stringbuf sb; inf>>&sb; cout<<sb.str()<<endl;
+** C++ conclusion :
+- private :: if not tag, default is 'private'
+- public :: normally has the construct method, if none, it's ok but meaningless.
+- inherit :: class B:public/private A {}; // B inherits A
+- target :: familiar to Cpp in July video 
+** TODO listen a bit july lesson and fill a bit kaitibaogao 
+** TODO org-agenda view 
+** TODO baidu tongbupan : 
+*** contents[/]
+- [ ] kinds of photos ::
+- [ ] job resume ::
+- [ ] papers :: 
+- [ ] else can be read in text in git ::
+* <2015-09-21 周一 17:14>[/] 
+** TODO finish filling 开题报告
+DEADLINE: <2015-09-22 周二 23:00>
+- [X] qq to laohu/tiange/liaoxin
+- [ ] write own article
+  - [ ] first :: query essays in 知网 and library
+  - [ ] second :: imitate hu's papers to write as soon as quickly
+** TODO finish filling resume
+DEADLINE: <2015-09-23 周三 23:00>
+- [ ] open tick to-do list, wiz and weixin contents
+- [ ] from above to make sure which companys
+- [ ] divided tow categories: every shoud have the target which no need too many
+  - internet company
+  - country company
+** program principle : 
+- define needs firstly and clearly
+- write code carefully
+- review code by self 
+- last operation is debugging
+** no schedule/deadline, no  no begins
+- wanna do, at least set a deadline if schedule does not be asure
+* <2015-09-23 周三 11:05>[/] 
+** [2015-09-23 周三 11:06] start to git push self-spacemacs 
+- 10~40kb/s to upload
+- if the speed is ok , time is ok
+** tidy bookmarks from chrom to leibao
+:LOGBOOK:
+CLOCK: [2015-09-23 周三 15:08]--[2015-09-23 周三 15:33] =>  0:25
+:END:
+* <2015-09-28 周一 15:44> [/] 
+** remember!
+- nowadays the core is algorithm, tools like emacs are great, but not
+first now
+* <2015-09-30 周三 13:51> [/] 
+** windows or mac or linux:
+*** every os has mang tools to make it more and more quickly and smoothly
+*** with a keyboard : cmd(appear by key) in picture is the best form
+- save the time kicking "ls" and "cd"
+- run speed ::
+  - first run speed
+  - learning spped :: sort algorithm, with recent used, datetime and etc.
+- quick repesent : first alphabet, first pinyin
+**** prototype : efficient used tool with keyboard and screen
+- 有点意思
+- mode change is necessary in vim :
+  - changing programs is nessary in an os. or, it will be like in emacs
+  - changing operation from keyboard, almost can leave mouse
+- viewing is very important, so bigger scrren is necessary even in cmd
+- main form :: generate list -> tag, sort and search to find -> turn into it
+  - it is enough quick
+  - list form is quck because hands must be on the keyboard
+
+* <2015-10-02 周五 10:47> [/] 
+** life in holiday [0/2]
+- [ ] it is firstly important to learning and view videoes
+  - cautious to make note in org files 
+- [ ] during the rest time, reacculate knowledge in org
+* <2015-10-08 周四 10:15> [0/0]  
+- make a system to store some secret message
+- learning experience ::
+  - [ ] learning knowledge concentrates on the actual scene
+  - [ ] from scene to remember the knowledge
+** efficient habit:
+- keep the most frequently used thing in hand,
+  - diminish other things in sight ( *hidden*, if necessary, delete)
+  - if hidden things were not used long time, they can be deleted
+- keep the most convient way to handle the thins
+  - example :
+    - in an OS or emacs with keyboard :: key-binding
+      - in emacs :: the most common operation need to remember the keys,
+        - other operation used the smex insted of the key
+        - as to say : remember the function name insted of its key-binding
+    - in iOS or Android :: the nearest position
+** do or learn sth
+- first finish the basic thing
+- then perfect it over and over
+  - do not think the useable edition firstly
+  - the first workout must be the basic-basic prototype
+** make podomoro in hand, 
+- no rigid based on the work
+- make it usual no alwalys
+** 'do it one by one' is the fastest 
+** centrate on *visualization*
+* <2015-10-10 周六 10:05> 
+** youku
+- download chaoqing
+- convert to mp4 format

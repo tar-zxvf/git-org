@@ -1,6 +1,10 @@
 * DailyInterview.org
 * this file is used to note learning and preparing Interview
 * time arrange : mornini : consider, evening : improve familiar
+* principle :: Attention :: This is ENOUGH
+** algorithm in C Programming Language
+** OOP concept in C++
+** ML in Python
 * <2015-09-06 周日 22:20>[0/1]lesson 2, part two cd 
 ** TODO need familiar to write the basic C++ code
 ** stack FirstInLastOut : only the top element is visible
@@ -35,3 +39,30 @@ deelply comprehen cmd 'git command'
 顺道说两个事情：
 1、注意julyedu.com问答社区的帖子。
 2、算法班太重要了（为何重要，你懂的）。
+* <2015-09-21 周一 09:23>[/] 
+** write examination for qunar : 
+- no matter which programming language, attention:
+  - operator to file ::
+    - write/read in file :: 
+    - :: 
+* <2015-10-10 周六 09:41> 
+** 邹博：对2016招聘题目的理解
+- 数学中的概率知识
+  - machine learning
+- logical algorithm :: the rule to choose people, only the meaning
+  - 可突击,只要通过考核。
+  - 通过了算法的考核，再去学其它东西肯定也可以。
+  - 即只是用算法的考核来考查 *学习能力*
+- 三门问题
+- 人类最习惯的是二维的东西
+- 约会问题
+- 古典概型
+* C++ programming style:
+** function name: camel
+** var : snake
+* July's book
+** reverse string
+- core function ::
+  - reverse :: input: string, m, n,  output: reversed string
+- issuse ::
+  - general thought :: cut some string to be reversed, finally reverse the whole string

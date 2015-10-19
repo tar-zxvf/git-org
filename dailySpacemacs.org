@@ -280,7 +280,7 @@ write down the thought
 * <2015-09-21 周一 09:48>[/] 
 ** evil-ace-jump-
 - spc l :: -line-mode
-- spc spc spc :: -word-mode
+*** [#A] spc spc spc :: -word-mode 
 ** interface implement 
 * <2015-09-22 周二 10:20>[/] 
 ** inactive time / deactive time

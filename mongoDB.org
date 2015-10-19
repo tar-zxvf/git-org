@@ -1,0 +1,30 @@
+* mongoDB.org
+* this file is used to note mongoDB(& sql) operation
+* <2015-10-13 周二 13:38> 
+- CURD ::
+  - create ::
+    - new db :: use new_db_name
+    - new collection :: db.new_coll_name
+    - new document :: db.coll.insert({"field": "name", ...})
+  - update ::
+    - ::
+  - read ::
+    - db.coll.find().limit(10).pretty().sort({"_id": 1}).skip(10) :: 
+      - sort by _id , xuchuan can from the last place to start
+        - mongoDB sort default is $natural order
+          - pymongo :: coll.find().sort("_id", 1)  1 : ascending, -1 : descending
+          - mongoDB :: db.coll.find().sort({"_id" : 1})
+          - attention :: db.coll.find().sort({"_id" : 1}).skip(100).limit(10)
+            - limit :: the result num returned
+            - skip :: begins from all the sorted data, skip 100, then return limit num
+    - db.coll.findOne()
+    - db.coll.find({"find_condition"},{"display_field})::
+      - "find_condition"::
+        - {"
+
+  - delete ::
+    - db.coll.remove() :: del all documents
+    - db.coll.remove({"..": ""}) :: del document
+* <2015-10-15 周四 10:11> 
+** default port
+- localhost:27017

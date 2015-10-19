@@ -1,0 +1,47 @@
+* self-used.org
+* this org is used to note anything self considered
+* Tools:
+** principle : cross platform, basicly mac os and windows
+** shortcut : vim is enough good
+** ultimae tool : start as a sevice with computer
+- spacemacs ::
+  - advantage :: almost can do evertying like an OS
+  - disadvantage ::
+    - plugins are so many that spend much time learning it
+    - the process to configure it to an IDE will cost much time
+    - start slowly
+- firefox ::
+  - advantage :: almost can do everything about surf on internet
+  - disadvantage ::
+    - default setting is ugly
+    - account management is hiden, feel ambigous and slow
+    - start slowly
+** simple but convient tool :  
+*** ready to use and can quickly to start project
+- liebao ::
+  - advantage :: 
+    - its core function is easy to use and quickly
+    - ui is default beautiful
+    - clearly and convient account management
+  - disadvantage :: no advanced function
+- vim :: origin edition
+  - advantage :: simple and strong function in origin edition
+  - disadvantage :: expand function is weaker than emacs
+** TODO make self-defined and adapted everywhere tool enviroment
+- the project will cost a lot of money
+- based on daily time
+- accumulate it bit by bit
+- the same as career,
+* Learning and Apply :: 
+** TODO catch the idea of learning programming language
+- find the balanced time of learning and implementing
+** note the experience learning and apllying
+- note :: is basic
+- review :: is progress
+* about QQ
+** aplly one account number
+** hang the account in computer
+- note the relevant information
+** every one day is one step to pregress
+* in Programming, slow is fast
+** doing slowly is thinking fast

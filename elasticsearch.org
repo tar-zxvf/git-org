@@ -106,3 +106,30 @@ curl -XGET 192.168.200.3:9210/mongo_travelnote/travelnote -d'
 - return a version for each search hit
   - { "version" : true,
       "query" : ....    }
+- refresh to make these changes visible
+  - curl -XPOST host:port/index/_refresh
+* <2015-10-10 周六 14:09> 
+- match query
+  - boost :: "match" : { "field_name" : { "query" : "xxx", "boost" : ..}}
+  - operator: "and" ::
+    - "match" : {"field_name" : { "query": "one word send" , "operator": "and"}}
+    - "bool":{"must":[{"term": {"field_name":"one"}},
+                      {"term": {"field_name": "word"}}]}
+- _source
+  - will not return _source if contains "partial_fields","fields"
+  - "_source" : false
+- bool query :: score for every must/should will be added together
+- dis max query :: return the score of best matching query
+  - tie_breaker
+- multimatch query ::
+  - types ::
+- size / from ::
+  - size : the maximum amount of hits
+  - from : the offset from the first result you want to fetch
+ 
+* <2015-10-16 周五 10:33> 
+- update api :: need "doc" or "script"
+curl -XPOST host:port/index/type/id -d '
+{ "doc": {"field_name" : "text"}}
+- delete api ::
+  - if deleted directly, es will return result containing "find": "false"

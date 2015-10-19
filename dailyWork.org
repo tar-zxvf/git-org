@@ -17,6 +17,13 @@ CLOCK: [2015-08-25 周二 14:52]--[2015-09-02 周三 17:13] => 194:21
 - basic :: is the most important
 ** state TODO to DONE:
 - remember to write the reason ::
+* WORK ACCUMUALTE:
+** scrapy to find *data scratching* work
+** deep in elasticsearch to find *search* work
+** JS to find *front-end* work
+* WORK CAUTION:
+** be cautious to solid basic knowledge about CS
+** accumulate work experience
 * <2015-08-26 周三 > [5/5]
 ** DONE send the documents from kedaxunfei to haizi
 CLOSED: [2015-08-26 周三 14:00]
@@ -626,29 +633,30 @@ elasticsearch.org
 - elasticsearch
 - mongoDB
 ** MVC (interview & career)  
-* 2 abnf, 1, mongoDB connector
-** TODO [#A] mongoDB connector
-** TODO [#B] ABNF self-implement** ik, replace xunfei abnf, ** sort factor(two way: main, jiandu),
-** TODO [#C] es search note etc.
-** mongoDB connector    data fact  mapping
+** 2 abnf, 1, mongoDB connector
+*** TODO [#A] mongoDB connector
+*** TODO [#B] ABNF self-implement** ik, replace xunfei abnf, ** sort factor(two way: main, jiandu),
+*** TODO [#C] es search note etc.
+*** mongoDB connector    data fact  mapping
 - oplog, error happened
 - connector from mongoDB to es implement, 
 - mapping
-** mongo-connector
-*** from big function completion to small detail
+*** mongo-connector
+**** from big function completion to small detail
 - installation
   - pip install mongo-connector
 - get started
   - [ ] install mongo-connector
   - [ ] start up a mongo replica ::
+    - monogod --replSet setName
+    - mongo
+    - rs.initiate()
   - [ ] start up elasticsearch
-  - [ ] start up mongo-connector with -m -t -d
-  -  
-- configuration file : config.json   dot-notation
+  - [ ] start up mongo-connector with -m mongodb_source -t target_system  -d doc_manager
+- ? :: configuration file : config.json   dot-notation
   - "__xxxx" will be ignored, can be used to comment
-
-*** system overview 
-1. main thread create oplogthread based on mongos? mongod? information,
+**** system overview 
+1. main thread creates oplogthread based on mongos? mongod? information,
    - initialize docmanger for each replication endpoint,
    - provied the docmangers to oplogthread
 2. oplogthread create an tailable cursor into oplog.rs collection of mongod
@@ -664,7 +672,7 @@ elasticsearch.org
 5. oplogthread notes the timestamp from oplog.rs and write out to oplog.timestamp
    - only happen untill mongo-connector is killed
    - other cases will cause oplogthread to take some actions
-*** oplog.timestamp
+**** oplog.timestamp
 - collection dumps ::
   - when oplog progress file is not found, mongo-connector will begin data form
     - all mongoDB collections in colllection dumps
@@ -681,6 +689,121 @@ elasticsearch.org
     - main threads of connector update the progress file per second
   - oplog-tailing thread publish their progress at following times:
     -  
-*** oplog progress file : 
+**** oplog progress file : 
 - created with collection dump which initiated by opload thread which created by main thread
 - updated usually by main thread, oploathread write out to if if main thread were killed
+* <2015-10-10 周六 10:11> [1/6] 
+** TODO familiar to mongo-connector to make it instinct [0/2]
+- [ ] systemd manage monogo-connector
+- [ ] learn systemd
+** TODO [#C] convert abnf to regex
+- efficeny
+- dict in regex
+** DONE [#A] finish write elasticsearch java  
+CLOSED: [2015-10-10 周六 12:56]
+- partial_fields :: only display data loaded from _source
+- fields :: will display all the segments
+** TODO [#A] elasticsearch mapping fields images mapping
+- answer and Qa docmanger in Mongo-connector
+** TODO [#B] elasticsearch aggregation, modeling data, handle relationship
+- qa mapping
+- mongo connector self docmanager
+** index meaning
+- locality :: city and big view area
+- viewspot ::
+- ::
+* <2015-10-12 周一 10:53>[2/3] 
+** DONE finish poi elasticsearch java
+CLOSED: [2015-10-12 周一 13:55]
+- for the moment : set one kind of sentence
+** TODO test script score query
+** DONE go back to school
+CLOSED: [2015-10-13 周二 10:07]
+* <2015-10-13 周二 10:07>[/] 
+** write a small mongo-connector demo
+*** target :: implement functions: only synchronize pointed index[2/2]
+  - enviroment :: open mongo, open es, open mongo-connector
+  - [X] test self-name doc_manager in mongo-connector :: rename elastic_doc_manager to self-name, 
+  - [X] change my_doc_manager :: firstly operation pointed index
+*** qa mongo-connector [0/3]
+- 'mongodb://tar:Iv7seV8niv0m@119.254.100.93:32001/andaman'
+  - Question
+  - Answer
+- attention : the logic and operation
+- [ ] make clear qa and es:qa
+- [ ] basic operation
+  - insert :: upsert
+    - divide QA into question and answer
+      - question 
+      - answer 
+  - update :: update
+  - del :: remove
+- [ ] maping correspond
+* <2015-10-14 周三 10:50> 
+** mongo-connector 
+- mongo-connector -m localhost:27017 -t http://192.168.200.3:9210 -d qa_doc_manager
+- mongoDB repl
+  - mongod --replSet singleNodeRepl  // later : mongoDB replicate set
+  - rs.initiate()
+  - mongod --dbpath
+** DONE first review own code : like a compiler
+CLOSED: [2015-10-14 周三 17:21]
+** run it testly
+** haizi education:
+- pure function ::
+  - 确定性 :: yes 
+  - 副作用 :: no 
+- python start with '_' :: private 
+  - case : _index private method of one class
+  - can get forcely : getattr('class_name', 'privat_method')
+- 幂等 :: the result does no change after execute same operation many times
+- Python :: 
+  - write decorator
+  - global various
+* <2015-10-15 周四 11:14> [/] 
+** test qa_doc_manager 
+- right cmd :: mongo-connector -m ... -t ... -d ...
+- if oplog had existed, operation on mongoDB will trigger the test doc manager
+  - del oplog:: 
+  - test operation :: write code??
+    - remove ::
+    - insert ::
+    - update ::
+** mongo-connector
+- es error : not enough space caused?
+- mongo-connector will exist if encounter es error
+- error -> find log file to search reason
+- alias mechanism in es to avoid change code in Python
+** deal with question 
+- first solve problems
+- consult the issues in the process of solving problems
+** Python
+- "is" and "==" usage
+- if not bool_True:
+      return 
+  else :
+- used to minus indentation
+** decorator
+- decorator is in common use 普适性
+- *args :: array
+- **kwargs :: keyword = value  {key : value}
+- multi decorator :: 
+** make function
+** pep8 : Python name regulation
+- camel : Java, mongoDB
+- snake : Python, ElasticSearch
+** catch cat neck
+- 1. safe
+- 2. save power
+- 3. make cat quite :: gene
+** Python and C
+ctypes
+* <2015-10-16 周五 11:05> 
+- pycharm key :: C-f8 :
+** Python
+- staticmethod :: in one class, if its method did not use "self", should be static
+** test cases:
+- mongo-connector
+* <2015-10-19 周一 11:05> 
+** TODO note the initial interest 
+** the two roads : js, python, mobile end
