@@ -5,6 +5,8 @@
 ** algorithm in C Programming Language
 ** OOP concept in C++
 ** ML in Python
+* interview principle
+** direct to the knowledge i am good at
 * <2015-09-06 ÖÜÈÕ 22:20>[0/1]lesson 2, part two cd 
 ** TODO need familiar to write the basic C++ code
 ** stack FirstInLastOut : only the top element is visible

@@ -1,0 +1,91 @@
+* LearnJavaScript.org
+* this file is used to note the process of learning JavaScript
+* First book : Eloquent JavaScript, w3cschool about JS.
+** Eloquent JavaScript:
+*** JavaScipt : not only the browser outside of the browser
+*** Don’t assume you understand them until you’ve actually written a working solution.
+** first basic type , function and others
+** main use of this programming language
+- Besides explaining JavaScript, I also will introduce the basic principles 
+  of programming. Programming, it turns out, is hard. The fundamental rules
+  are typically simple and clear. But programs built on top of these rules
+  tend to become complex enough to introduce their own rules and complexity.
+  You’re building your own maze, in a way, and you might just get lost in it.
+- It is up to you to make the necessary effort. When you are struggling
+   to follow the book, do not jump to any conclusions about your own capabilities.
+  You are fine—you just need to keep at it. Take a break, reread some material,
+  and always make sure you read and understand the example programs and exercises.
+  Learning is hard work, but everything you learn is yours and will make subsequent
+  learning easier.
+- To some of us, writing computer programs is a fascinating game. A program is
+  a building of thought. It is costless to build, it is weightless, and it grows
+  easily under our typing hands.
+- Keeping programs under control is the main problem of programming
+- The art of programming is the skill of controlling complexity.
+  The great program is subdued—made simple in its complexity.
+* fram > time note, so no timestamp
+** basic type and output statement
+:LOGBOOK:
+CLOCK: [2015-10-20 周二 15:52]--[2015-10-20 周二 16:17] =>  0:25
+CLOCK: [2015-10-20 周二 15:15]--[2015-10-20 周二 15:40] =>  0:25
+CLOCK: [2015-10-20 周二 14:42]--[2015-10-20 周二 15:07] =>  0:25
+CLOCK: [2015-10-20 周二 14:14]--[2015-10-20 周二 14:39] =>  0:25
+CLOCK: [2015-10-20 周二 12:00]--[2015-10-20 周二 12:25] =>  0:25
+CLOCK: [2015-10-20 周二 11:25]--[2015-10-20 周二 11:50] =>  0:25
+CLOCK: [2015-10-20 周二 10:49]--[2015-10-20 周二 11:14] =>  0:25
+:END:
+six types: numbers, strings, booleans, undefined values, objects, functions
+- number :: 64 bits, 2^64 = 18+18ge0
+  - special : infinite, -infinite,  NaN: Not a Number
+- string :: '' ""  \   test: "\\\"
+- boolean :: true, false   compare as unicode standard
+  - NaN != NaN ::
+  - &&  ||  ! ::
+  - ( ? : ) ::
+  - null undefined :: denote the absence of a meaningful value
+    - null == 0 :: false,  only == null and defined
+  - 0, "", NaN, == false :: 
+    - ===, !==, test the precisely vale equal or not
+      - == != , will convert type automatically
+- typeof()
+- side effects :: 副作用
+  - make impression on the world.
+- semicolon :: recommand always add semicolon,
+  - the rules for when it can be safely omiited are somewhat complex and error-porne ::
+- work flow :: draw the flow picture with hand
+- strt from 0 :: rom C pitfalls, if like [1, 100], form 1 start
+- += ::
+- a+++  a--
+- camel Name Method ::
+- the usage of "||" in 2.2 exercise ::
+- the difference between if and if-else::
+- watch the null string '' and ' ' :: 
+** data collection type like array, list, dict, set, etc.
+** string
+** oop and function program
+:LOGBOOK:
+CLOCK: [2015-10-20 周二 17:07]--[2015-10-20 周二 17:32] =>  0:25
+:END:
+*** function
+- var funcName = function(argu){...};
+- function funcName(){...}
+- return without an expression will return undefined
+- in JS, only function create a new scope,  [} also do as it in some languages
+- call stack
+- too many arguments, ignored. too few arguments, assigned undefined
+- closure
+- recursion
+  - The dilemma of speed versus elegance is an interesting one.
+    You can see it as a kind of continuum between human-friendliness and
+    machine-friendliness.
+- The reason I’m stressing this is that surprisingly many beginning
+  programmers focus fanatically on efficiency, even in the smallest details.
+  The result is bigger, more complicated, and often less correct programs,
+  that take longer to write than their more straightforward equivalents and
+  that usually run only marginally faster.
+- .length
+- String()
+- about function name and usage
+- pure function, side effect
+- don't have to repeat as much, and group code into concept chunks
+- "string".charAt(N) get the Nth character or letter

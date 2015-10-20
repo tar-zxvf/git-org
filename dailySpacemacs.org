@@ -310,6 +310,10 @@ write down the thought
 
 
 * only do daily accumulation
+** accumlate the needs 
+- [ ] startup default spc t f
+- [ ] auto break lines
+** schedule the time, precise to minute 
 * most common used keybinding:
 - M-/ ::
 - S-TAB ::

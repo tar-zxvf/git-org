@@ -752,7 +752,8 @@ CLOSED: [2015-10-14 周三 17:21]
 ** haizi education:
 - pure function ::
   - 确定性 :: yes 
-  - 副作用 :: no 
+  - 副作用 :: no
+  - do not read global variable :: 
 - python start with '_' :: private 
   - case : _index private method of one class
   - can get forcely : getattr('class_name', 'privat_method')

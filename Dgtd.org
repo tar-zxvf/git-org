@@ -15,6 +15,10 @@
 - or to add or to create sth i love
 *** develop the web, Android, IOS,
 :JavaScript:
+* PRINCIPLE: NOTE TO ORG FILE FORM NOTEBOOK IS NECESSARY
+* Read The Art of Computer Programming if i have spacetime
+* 兴奋地去迎接机会的到来，而不是因为怕抓不住机会而紧张，从而错失了机会
+* 机会来了，没有理由去要求自己保持平静，而是要兴奋的平静。
 * this file is used to note dailylife.
 * program basic : shoude be very familiar to this as a programmer 
 + 2^16 = 65536
@@ -35,6 +39,8 @@ CLOCK: [2015-09-19 周六 17:57]--[2015-09-19 周六 18:22] =>  0:25
   - conclusion :: if necessary, go to mba
   - finally :: code::blocks: lack of compiler setting
     - finally :: return dev-cpp : 天大的讽刺啊，微软，呵呵
+    - Finally :: CLion, poisoned in Jetbrains
+      - the operations, the keys, the UI, has become a habbit:: 
 - spacemacs cpp ide is a bit of complex in ms
 *** third pomodoro : *start* some learning:
 - L01OOP
@@ -235,3 +241,50 @@ first now
 ** youku
 - download chaoqing
 - convert to mp4 format
+* <2015-10-20 周二 08:56> [0/5] 
+** TODO call sister about the interview
+SCHEDULED: <2015-10-20 周二 10:30>
+** TODO prepare the interview of shumeng and huasan 
+*** shumeng : 
+- [ ] basic C skill
+  - basic sort program,
+  - switch const?
+    - swicth case break;  default, label
+  - basic C complier and run process
+  - strcpy, strncpy, strlcopy, sizeof
+  - fromatter variable : uint %u  %x %X     int %d
+    - [ ] bring back book from school tomorrow
+  - 字节对齐:
+    - 所有类型长度，对齐一致, divided 32bit or 64bit
+    - 整个结构要对齐： 字节数是最长变量字节数的整数倍
+  - memcpy, memcompare
+  - big/small end
+    - 网络序：大字节序
+    - 主机序；分大小端
+  - incline function in C++
+  - 内核态 ？
+- [ ] about OOP, Learning C++ basic concept
+  - MVC model
+  - private, pretect, public,
+  - override
+  - basci OOP knowledge
+- [ ] network relevant
+- [ ] about algorithm : list, string, stack, heap, enough
+- [ ] huasan project
+  - papers theme relevant
+  - cmd register relevant
+*** huasan : 
+- [ ] base to the above, emphasis the intern knowledge
+** TODO review to the scrapy frame to prepare to bytedance
+SCHEDULED: <2015-10-25 周日>
+- review to the andaman code
+- serach some basic crawler knowledge with google
+** prepare to 中国搜索
+SCHEDULED: <2015-11-01 周日>
+- MachineLearning
+** TODO search 华为，一点网聚题目
+SCHEDULED: <2015-10-21 周三 10:00>
+** TODO go to school to take certificate papers on Wednesday
+carry bag home
+** TODO search oracle issues
+SCHEDULED: <2015-11-07 周六 10:00>
