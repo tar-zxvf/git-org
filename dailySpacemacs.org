@@ -305,15 +305,15 @@ write down the thought
       study it with docs by self and skilled experience, and then consider it
       and become practised and skilled
     - not lost in it and make clear the core target
- 
-
-
-
 * only do daily accumulation
 ** accumlate the needs 
 - [ ] startup default spc t f
 - [ ] auto break lines
 ** schedule the time, precise to minute 
+** del the useless file record
+** count time about time range
+** lack of a remainder when the pomodoro finished
+** test browse internet in emacs
 * most common used keybinding:
 - M-/ ::
 - S-TAB ::

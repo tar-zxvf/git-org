@@ -1,4 +1,8 @@
 * DailyInterview.org
+* [#A] workspace learn interview, 
+** care to take a rest appropriately
+** look more, learn more, remember more, no matter where stays
+** consistent and 
 * this file is used to note learning and preparing Interview
 * time arrange : mornini : consider, evening : improve familiar
 * principle :: Attention :: This is ENOUGH

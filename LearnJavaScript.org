@@ -23,7 +23,9 @@
 - Keeping programs under control is the main problem of programming
 - The art of programming is the skill of controlling complexity.
   The great program is subdued—made simple in its complexity.
+* write semicolon
 * fram > time note, so no timestamp
+** tentacle model of variable bindings
 ** basic type and output statement
 :LOGBOOK:
 CLOCK: [2015-10-20 周二 15:52]--[2015-10-20 周二 16:17] =>  0:25
@@ -61,9 +63,68 @@ six types: numbers, strings, booleans, undefined values, objects, functions
 - the difference between if and if-else::
 - watch the null string '' and ' ' :: 
 ** data collection type like array, list, dict, set, etc.
+:LOGBOOK:
+CLOCK: [2015-10-21 周三 15:07]--[2015-10-21 周三 15:32] =>  0:25
+CLOCK: [2015-10-21 周三 14:02]--[2015-10-21 周三 14:27] =>  0:25
+CLOCK: [2015-10-21 周三 10:25]--[2015-10-21 周三 10:50] =>  0:25
+CLOCK: [2015-10-21 周三 09:48]--[2015-10-21 周三 10:13] =>  0:25
+:END:
+*** var listOfNumber = [1, 2, 3...] 
+- called an array
+- in JS, every value has property, except null and defined
+- to access the property:
+  Whereas value.x fetches the property of value named “x”, as to say, x is variable name
+  value[x] tries to evaluate, as to say x is expression
+  the expression x and uses the result as the property name.
+- array : .pop() .push(.., .., ...) .join("..") also some like in Python, '..'.join(string)
+- indexOf(), search the given element in an array from start, if not existed, return -1
+  - lastIndexOf(), search from the end
+  - both the two functions take optional second argument that indicates where to
+    start searching from
+- slice
+- concat
+- generally useful array methods.
+  - push, pop  corresponding method at the start of array is  unshift, shift
+- foreach
+**** forEach
+- takes only one required argument: the function to be executed for each element.
+**** filter
+**** array.forEach(function), array.filter(function)
+*** object {...}
+- var day1 = { a: true, b: ['a', 'b'] };   diff in Python
+- Properties whose names are not valid variable names or valid numbers have to be quoted.
+- var day2 = {'2': 2, 'test one': 3};
+- delete, in  also can be used in array
+- string value cannot be changes, almost in every language
+- *coefficient* 
+- for (var x in map) { console.log(x, map[x]);}
+*** string
+- string, boolean, num, their properties are immutable and can not be changed
+  - but these types does have built-in properties
+  - .length
+  - .toUpperCase
+  - slice
+  - indexOf(),  can take a string containing many character, 'three'.indexOf('ee);
+  - trim, remove whitespaces(space, tab, newline)
+  - charAt();
+*** arguments model
+- .length
+- arguments[i]
+*** Math
+- Math.max, .min, .sqrt
+- .cos, .sin, .tan, .acos, .asin, .atan, .PI  write constants with all caps
+- .random()  between 0(inclusive) and 1(exclusive)
+- .floor(Math.random()*10)  whole random number, round down to the nearest whole number
+- .ceil()  round up to a whole number
+- .round() to the nearest number
+*** global model
+- every global various is stored in window variable, and presented as its property
+*** exercise 4.3, 4.4
+
 ** string
 ** oop and function program
 :LOGBOOK:
+CLOCK: [2015-10-21 周三 16:21]--[2015-10-21 周三 16:46] =>  0:25
 CLOCK: [2015-10-20 周二 17:07]--[2015-10-20 周二 17:32] =>  0:25
 :END:
 *** function
@@ -74,8 +135,10 @@ CLOCK: [2015-10-20 周二 17:07]--[2015-10-20 周二 17:32] =>  0:25
 - call stack
 - too many arguments, ignored. too few arguments, assigned undefined
 - closure
+  + being able to reference a specific instance of local variables in an enclosing
+    function—is called closure
 - recursion
-  - The dilemma of speed versus elegance is an interesting one.
+  + The dilemma of speed versus elegance is an interesting one.
     You can see it as a kind of continuum between human-friendliness and
     machine-friendliness.
 - The reason I’m stressing this is that surprisingly many beginning
@@ -89,3 +152,8 @@ CLOCK: [2015-10-20 周二 17:07]--[2015-10-20 周二 17:32] =>  0:25
 - pure function, side effect
 - don't have to repeat as much, and group code into concept chunks
 - "string".charAt(N) get the Nth character or letter
+**** care about: "function" keyword, and return mechanism
+*** high-order function
+**** It has to become second nature, for a programmer, to notice when a concept is begging to be abstracted into a new word.
+*** JSON 
+- JSON.stringfy(json), JSON.parse(string)
