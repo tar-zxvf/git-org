@@ -1,0 +1,18 @@
+* divided into components
+* FilterableProductTable
+** SearchBar
+** ProductTable
+*** ProductCategoryRow
+*** ProductRow
+
+
+
+
+var ProductRow = React.createClass({
+    render: function(){
+        return (
+            tr
+    }
+});
+
+                                   var help = ProductRow;

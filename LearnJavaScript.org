@@ -1,8 +1,12 @@
 * LearnJavaScript.org
+* LearnFlow:
+** eloquent JavaScript -> 深入浅出 ES6 -> React -> [[http://zh.discovermeteor.com/chapters/introduction/][Meteor]] 
 * this file is used to note the process of learning JavaScript
+* JavaScript : Prototype
+prototype, instanceof
 * First book : Eloquent JavaScript, w3cschool about JS.
 ** Eloquent JavaScript:
-*** JavaScipt : not only the browser outside of the browser
+*** JavaScript : not only the browser outside of the browser
 *** Don’t assume you understand them until you’ve actually written a working solution.
 ** first basic type , function and others
 ** main use of this programming language
@@ -39,7 +43,9 @@ CLOCK: [2015-10-20 周二 10:49]--[2015-10-20 周二 11:14] =>  0:25
 six types: numbers, strings, booleans, undefined values, objects, functions
 - number :: 64 bits, 2^64 = 18+18ge0
   - special : infinite, -infinite,  NaN: Not a Number
+  - number.string(), number.string(2/8/16)
 - string :: '' ""  \   test: "\\\"
+  - parseInt(string, (2/8/10/16)), parseFloat(string) :: convert part value
 - boolean :: true, false   compare as unicode standard
   - NaN != NaN ::
   - &&  ||  ! ::
@@ -78,6 +84,7 @@ CLOCK: [2015-10-21 周三 09:48]--[2015-10-21 周三 10:13] =>  0:25
   the expression x and uses the result as the property name.
 - array : .pop() .push(.., .., ...) .join("..") also some like in Python, '..'.join(string)
 - indexOf(), search the given element in an array from start, if not existed, return -1
+  - if not exists, return -1
   - lastIndexOf(), search from the end
   - both the two functions take optional second argument that indicates where to
     start searching from
@@ -89,7 +96,7 @@ CLOCK: [2015-10-21 周三 09:48]--[2015-10-21 周三 10:13] =>  0:25
 **** forEach
 - takes only one required argument: the function to be executed for each element.
 **** filter
-**** array.forEach(function), array.filter(function)
+**** array.forEach(function), array.filter(array, function), array.map(array, function)
 *** object {...}
 - var day1 = { a: true, b: ['a', 'b'] };   diff in Python
 - Properties whose names are not valid variable names or valid numbers have to be quoted.
@@ -157,3 +164,86 @@ CLOCK: [2015-10-20 周二 17:07]--[2015-10-20 周二 17:32] =>  0:25
 **** It has to become second nature, for a programmer, to notice when a concept is begging to be abstracted into a new word.
 *** JSON 
 - JSON.stringfy(json), JSON.parse(string)
+*** It is helpful to roughly keep track of how often a piece of your program is going to run.
+*** bind and apply method
+** need to review contents after learning knowledge
+** OOP
+:LOGBOOK:
+CLOCK: [2015-10-22 周四 16:45]--[2015-10-22 周四 17:10] =>  0:25
+CLOCK: [2015-10-22 周四 16:15]--[2015-10-22 周四 16:40] =>  0:25
+CLOCK: [2015-10-22 周四 15:38]--[2015-10-22 周四 16:03] =>  0:25
+CLOCK: [2015-10-22 周四 14:28]--[2015-10-22 周四 14:53] =>  0:25
+:END:
+面向对象语言的要求
+- 一种面向对象语言需要向开发者提供四种基本能力：
+  * 封装 :: 把相关的信息（无论数据或方法）存储在对象中的能力
+  * 聚集 :: 把一个对象存储在另一个对象内的能力
+  * 继承 :: 由另一个类（或多个类）得来类的属性和方法的能力
+  * 多态 :: 编写能以多种方法运行的函数或方法的能力
+  * ECMAScript 支持这些要求，因此可被是看做面向对象的。
+- herit, override, virtual(pure virtual class, method, interface as connectors),
+  is enough
+- this, method, properties, object
+- apply, call, bind
+- the way JavaScript objects work ::
+  - Object.getPrototypeOf
+  - Object.create
+- new, this
+- prototype, add the same property to override the property
+- properties : enumrable : added properties, show up in for/in loop
+  - nonenumrable : standard properties,  do not show up in for/in loop
+- .hasOwnProperty('..'), in
+- defineProperty(Object.Prototype, 'property_name', {enumrable: false, value: 'hi'})
+- Object.create(null), create an object without prototype
+- lay out an table
+- treated as constructor :: new function_name()
+
+** bind(this)
+this only pass one container, the inner function need bind this
+* eloquent JS use an program, difficult. go to w3cschool
+** 对象冒充 ：understand 'this' keyword correctly 
+** 
+* Leran Function, must clearly about input, output and arguments
+* ES6
+** arrow function & 模板字符串 `...`
+** for-of loop
+- for-in loop traverse the properties
+- for-of loop traverse the value of data
+  - do not support the basic object
+  - Symbol.iterator
+** generator
+- function*, 
+- when encounter 'yield' frozen,
+- iterator.next() unfreeze to go on to the next 'yield'
+- iterator through the es6 standard
+** own : promise ? 
+** `
+- `i have ${num} boks`, \`, \$, \{, \}
+- if ${num} not a string, it will call .toString() method
+- `, can write through breaked lines
+** function(a, ...b)
+- assign arguments excep a to variable b;
+- default argument, like Python fucntion(a='', b=''),
+  - in es6, valued form left to right
+  - function(a='', b), default: b=undefined
+** deconstruct
+- for (var [key] of map){..}
+- for (var [,value] of map){...}
+** arrow function
+<!--	单行注释
+-->	“趋向于”操作符
+<=	小于等于
+=>	这又是什么？
+a => a > 0;
+(a, b) => a + b;
+event => {..}  execute the sentenses in {}
+event => ({})  create an {} object
+- this
+  - 内层函数不会从外围函数继承this值
+  - can used arrow function function (x){ _.each(x, x => this.add(x))}
+** set 
+- new Set(iterable), turn one iterable object to an set,
+- Map, Set, WeakSet, WeakMap
+** generator
+- .next({..}) :: .next() can receive an argument,
+  - the generator will save the argument 

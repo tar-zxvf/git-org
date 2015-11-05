@@ -288,3 +288,11 @@ SCHEDULED: <2015-10-21 周三 10:00>
 carry bag home
 ** TODO search oracle issues
 SCHEDULED: <2015-11-07 周六 10:00>
+* <2015-10-22 周四 13:09> [/]
+** ready to huasan
+** learn Scrapy to bytedance
+** 
+* <2015-10-28 to next week> 
+- familiar with English, word and tell
+- bytedace and scrapy,
+- next next week: search

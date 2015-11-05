@@ -314,6 +314,14 @@ write down the thought
 ** count time about time range
 ** lack of a remainder when the pomodoro finished
 ** test browse internet in emacs
+** daily git
+*** deal with conflicts
+*** deal with branches
+** org open at point: C-c C-o
+** IRC
+** behavior like sublime square, and like IDE: a line every a block code
+** how to change the mode through cmd
+** how to apply the mode immediately when changing language
 * most common used keybinding:
 - M-/ ::
 - S-TAB ::

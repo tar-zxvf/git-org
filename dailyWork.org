@@ -808,3 +808,46 @@ ctypes
 * <2015-10-19 周一 11:05> 
 ** TODO note the initial interest 
 ** the two roads : js, python, mobile end
+* <2015-10-28 周三 16:27> 
+** React
+:LOGBOOK:
+CLOCK: [2015-10-28 周三 17:05]--[2015-10-28 周三 17:30] =>  0:25
+:END:
+*** component : one component do one thing, like function
+*** render() : render the return part
+*** <td>{variable_name}</td> -> JSX 
+*** simpler web pages: easier to go top-down 
+*** large and complex project: easier to go bottom-up and write test as build
+*** html tag will ignore the spaces at the start and end of inside tag
+**** inside the tag, html will treate multiple spaces to one space
+*** state,
+- DRY: Don't Repeat Yourself
+- getInitialState:
+*** HTML语法，various input type
+- <p> :: define an paragraph
+- <input> ::
+  - type :: 
+    - "text" : value={...}
+    - "checkbox" : checked={..}
+  - placeholder ::
+- <span> :: 文档中的行内元素
+- <div> :: level block element, divide block to different parts
+- <tr> <td> <th> ::
+  - <td> :: table cell
+  - <tr> :: table one line
+  - <th> :: table header
+  - <thead> :: define the header of one table
+  - <tbody> :: define the body of one table
+  - <tfoot> :: define the foot of one table
+- callback event::
+  - onBlur ::
+  - onFocus ::
+  - onChange ::
+  - onClick :: 
+* <2015-10-30 周五 10:34>  
+** Meteor
+- publish, subscribe, collections
+- Meteor.publish('post_name', function(){
+     return Posts_name.find();  //mongoDB syntax
+});
+- .observe() : 响应式
